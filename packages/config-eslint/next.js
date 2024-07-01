@@ -1,4 +1,5 @@
 const { resolve } = require('node:path')
+const { overrides } = require('./react')
 
 const project = resolve(process.cwd(), 'tsconfig.json')
 
@@ -40,7 +41,6 @@ module.exports = {
 		},
 	},
 	ignorePatterns: ['node_modules/', 'dist/'],
-	// add rules configurations here
 	rules: {
 		'import/no-default-export': 'off',
 		'react/function-component-definition': [
@@ -48,16 +48,6 @@ module.exports = {
 			{
 				namedComponents: 'arrow-function',
 				unnamedComponents: 'function-expression',
-			},
-		],
-		'sort-imports': [
-			'warn',
-			{
-				ignoreCase: false,
-				ignoreDeclarationSort: false,
-				ignoreMemberSort: false,
-				memberSyntaxSortOrder: ['none', 'all', 'multiple', 'single'],
-				allowSeparatedGroups: true,
 			},
 		],
 		'unicorn/filename-case': [
@@ -70,5 +60,21 @@ module.exports = {
 				},
 			},
 		],
+	},
+	overrides: {
+		rules: {
+			'sort-imports': [
+				'warn',
+				{
+					memberSyntaxSortOrder: [
+						'none',
+						'all',
+						'multiple',
+						'single',
+					],
+					allowSeparatedGroups: true,
+				},
+			],
+		},
 	},
 }
