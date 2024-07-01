@@ -16,5 +16,5 @@ This Turborepo uses the following tools, packages and utilities
 -   [TypeScript](https://www.typescriptlang.org/) for static type checking
 -   [ESLint](https://eslint.org/) for code linting
 -   [Prettier](https://prettier.io) for code formatting
--   [Chakra UI](https://v2.chakra-ui.com/) components
+-   ~[Chakra UI](https://v2.chakra-ui.com/) components~
 -   [Tailwind CSS](https://tailwindcss.com/) for custom styling
