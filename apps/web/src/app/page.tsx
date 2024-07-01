@@ -1,5 +1,5 @@
-import { Box, Button, HStack, Heading, VStack } from '@chakra-ui/react'
-import { Card } from '@repo/ui/card'
+import { Button, HStack, Heading, VStack } from '@chakra-ui/react'
+import { Card } from '@repo/ui/components'
 import Image from 'next/image'
 
 export default function Page(): JSX.Element {
@@ -26,7 +26,7 @@ export default function Page(): JSX.Element {
 			</HStack>
 
 			<VStack py={{ base: 8, md: 12 }} minH={96} justifyContent='center'>
-				<HStack p={{ base: 4, md: 6 }} rounded='lg' bg='gray.50'>
+				<HStack p={{ base: 4, md: 8 }} rounded='lg' bg='gray.50'>
 					<Image
 						alt=''
 						height={120}
