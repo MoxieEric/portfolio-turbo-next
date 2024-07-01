@@ -26,7 +26,12 @@ export default function Page(): JSX.Element {
 			</HStack>
 
 			<VStack py={{ base: 8, md: 12 }} minH={96} justifyContent='center'>
-				<HStack p={{ base: 4, md: 8 }} rounded='lg' bg='gray.50'>
+				<HStack
+					p={{ base: 4, md: 8 }}
+					rounded='lg'
+					bg='gray.50'
+					gap={4}
+				>
 					<Image
 						alt=''
 						height={120}
