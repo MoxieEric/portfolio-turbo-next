@@ -30,6 +30,7 @@
 		"@repo/typescript-config": "workspace:*",
 		"@types/react": "^18.2.61",
 		"autoprefixer": "^10.4.18",
+		"next": "^14.2.3",
 		"postcss": "^8.4.35",
 		"framer-motion": "^11.2.12",
 		"tailwindcss": "^3.4.1",
