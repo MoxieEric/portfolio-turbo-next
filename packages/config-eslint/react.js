@@ -44,6 +44,16 @@ module.exports = {
 				unnamedComponents: 'function-expression',
 			},
 		],
+		'unicorn/filename-case': [
+			'warn',
+			{
+				cases: {
+					kebabCase: true,
+					camelCase: true,
+					pascalCase: true,
+				},
+			},
+		],
 	},
 	overrides: [
 		{
