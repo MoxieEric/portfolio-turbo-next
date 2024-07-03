@@ -42,6 +42,7 @@ module.exports = {
 	},
 	ignorePatterns: ['node_modules/', 'dist/'],
 	rules: {
+		'@typescript-eslint/no-unnecessary-condition': 'off',
 		'import/no-default-export': 'off',
 		'react/function-component-definition': [
 			'error',

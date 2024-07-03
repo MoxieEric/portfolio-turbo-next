@@ -1,8 +1,7 @@
 'use client'
 
-import { Box, Flex, Heading, Text } from '@chakra-ui/react'
+import { Flex, Heading } from '@chakra-ui/react'
 import React, { type ReactNode } from 'react'
-import { FeatureCard, SimpleCard } from '../cards'
 
 interface ScreenSectionProps {
 	children: ReactNode

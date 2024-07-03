@@ -3,7 +3,7 @@
 import { Button, HStack, Heading } from '@chakra-ui/react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 
 export interface NavBarLink {
 	label: string
@@ -17,11 +17,11 @@ interface NavBarProps {
 
 const NavBar: React.FC<NavBarProps> = ({ links }) => {
 	const pathname = usePathname()
-	const [title, setTitle] = React.useState<string>()
+	const [title, setTitle] = useState<string>()
 
-	React.useEffect(() => {
+	useEffect(() => {
 		setTitle(links.find((link) => link.path === pathname)?.label)
-	}, [pathname])
+	}, [pathname, links])
 
 	return (
 		<HStack
