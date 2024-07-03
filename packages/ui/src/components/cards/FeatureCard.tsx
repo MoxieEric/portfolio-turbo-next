@@ -54,7 +54,7 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 			{...props}
 		>
 			<Stack
-				alignItems='center'
+				alignItems='start'
 				direction={{ base: 'column', md: 'row' }}
 				gap={2}
 			>

@@ -26,6 +26,7 @@ const Intro: React.FC = () => {
 					objectPosition={{ base: '0 -3rem', md: '0' }}
 					rounded='xl'
 					src='/headshot--sm.png'
+					w={{ base: 'full', md: 72 }}
 				/>
 			</Box>
 

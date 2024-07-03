@@ -28,20 +28,6 @@ const Experience: React.FC = () => {
 						</HStack>
 					</FeatureCard>
 				))}
-
-				{/* <FeatureCard size='sm' w='full'>
-					<Heading size='md'>Director of UX | Sr. Engineer</Heading>
-					<HStack gap={2}>
-						<Heading size='sm'>BrewLogix</Heading>
-						<Text size='sm'>
-							Indiannapolis, IA <Code px={1}> Remote</Code>
-						</Text>
-					</HStack>
-					<HStack alignItems='center' spacing={0.5}>
-						<Icon as={HiCalendar} />
-						<Text size='sm'>Dec. 2021 - June 2024</Text>
-					</HStack>
-				</FeatureCard> */}
 			</VStack>
 		</ScreenSection>
 	)
