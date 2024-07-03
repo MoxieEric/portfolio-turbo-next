@@ -17,7 +17,7 @@ const RootLayout = ({
 	children: React.ReactNode
 }): JSX.Element => {
 	return (
-		<html lang='en' className={`${font.className} ${font.variable}`}>
+		<html className={`${font.className} ${font.variable}`} lang='en'>
 			<body>
 				<UiProvider>{children}</UiProvider>
 			</body>

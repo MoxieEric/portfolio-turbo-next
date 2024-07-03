@@ -1,6 +1,6 @@
 import { Text } from '@chakra-ui/react'
 
 const Page: React.FC = () => {
-	return <>resume</>
+	return <Text>resume</Text>
 }
 export default Page

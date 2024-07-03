@@ -1,10 +1,11 @@
 'use client'
+import { FC } from 'react'
 import Experience from '../components/sections/Experience'
 import Intro from '../components/sections/Intro'
 import Skills from '../components/sections/Skills'
 import Stats from '../components/sections/Stats'
 
-export default function Page(): JSX.Element {
+const Page: FC = () => {
 	return (
 		<>
 			<Intro />
@@ -14,3 +15,5 @@ export default function Page(): JSX.Element {
 		</>
 	)
 }
+
+export default Page
