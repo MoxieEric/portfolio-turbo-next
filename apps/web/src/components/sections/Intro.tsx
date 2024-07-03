@@ -18,13 +18,18 @@ import { SiGithub, SiLinkedin } from 'react-icons/si'
 const Intro: React.FC = () => {
 	return (
 		<Flex flexDirection={{ base: 'column', md: 'row' }} gap={4}>
-			<Box h={{ base: '96', md: 'auto' }} w={{ base: 'full', md: 72 }}>
+			<Box
+				h={{ base: '96', md: 'auto' }}
+				overflow='hidden'
+				rounded='xl'
+				shadow='sm'
+				w={{ base: 'full', md: 72 }}
+			>
 				<Image
 					alt='Headshot of Eric Nowels'
 					height='full'
 					objectFit='cover'
 					objectPosition={{ base: '0 -3rem', md: '0' }}
-					rounded='xl'
 					src='/headshot--sm.png'
 					w={{ base: 'full', md: 72 }}
 				/>
