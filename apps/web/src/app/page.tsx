@@ -2,6 +2,7 @@
 import { SimpleGrid, StatGroup, Text } from '@chakra-ui/react'
 import { FeatureCard, SimpleCard, StatCard } from '@repo/ui/components'
 import Image from 'next/image'
+import Experience from '../components/sections/Experience'
 import Intro from '../components/sections/Intro'
 import Skills from '../components/sections/Skills'
 
@@ -10,14 +11,15 @@ export default function Page(): JSX.Element {
 		<>
 			<Intro />
 			<Skills />
-			<SimpleCard title='Experience'>
+			<Experience />
+			{/* <SimpleCard title='Experience'>
 				<FeatureCard title='BrewLogix' size='sm' bg='purple.50'>
 					<Text fontSize='lg'>...</Text>
 				</FeatureCard>
 				<FeatureCard title='Moxie Sozo' size='sm' colorScheme='teal'>
 					<Text fontSize='lg'>...</Text>
 				</FeatureCard>
-			</SimpleCard>
+			</SimpleCard> */}
 			<SimpleCard title='Portfolio'>
 				<Text fontSize='md'>
 					Highlights from my favorite projects and clients over the

@@ -2,14 +2,12 @@ import type { As } from '@chakra-ui/react'
 import {
 	FaChartGantt,
 	FaHandPointer,
-	FaTimeline,
 	FaUserGraduate,
 	FaWheelchair,
 } from 'react-icons/fa6'
 import { HiDeviceMobile, HiRefresh } from 'react-icons/hi'
 import {
 	HiBeaker,
-	HiCheckBadge,
 	HiCodeBracket,
 	HiGlobeAlt,
 	HiLightBulb,
@@ -36,7 +34,6 @@ import {
 	SiHasura,
 	SiHtml5,
 	SiHyper,
-	SiInfosys,
 	SiJavascript,
 	SiJest,
 	SiJira,
@@ -47,15 +44,12 @@ import {
 	SiNuxtdotjs,
 	SiOctopusdeploy,
 	SiPhp,
-	SiPnpm,
 	SiPostgresql,
-	SiProtondrive,
 	SiPython,
 	SiReact,
 	SiReactos,
 	SiRedis,
 	SiRedux,
-	SiScrumalliance,
 	SiSinglestore,
 	SiSketch,
 	SiStorybook,
