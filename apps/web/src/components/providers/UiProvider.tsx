@@ -18,7 +18,7 @@ const UiProvider: React.FC<UiProviderProps> = ({ children }) => {
 				py={4}
 				alignItems='center'
 				gap={{ base: 4, md: 8 }}
-				justifyContent='flex-start'
+				justifyContent='center'
 				w='full'
 			>
 				<NavBar links={navigationConfig} />

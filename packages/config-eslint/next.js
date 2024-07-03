@@ -61,20 +61,21 @@ module.exports = {
 			},
 		],
 	},
-	overrides: {
-		rules: {
-			'sort-imports': [
-				'warn',
-				{
-					memberSyntaxSortOrder: [
-						'none',
-						'all',
-						'multiple',
-						'single',
-					],
-					allowSeparatedGroups: true,
-				},
-			],
-		},
-	},
+	overrides,
+	// overrides: {
+	// 	rules: {
+	// 		'sort-imports': [
+	// 			'warn',
+	// 			{
+	// 				memberSyntaxSortOrder: [
+	// 					'none',
+	// 					'all',
+	// 					'multiple',
+	// 					'single',
+	// 				],
+	// 				allowSeparatedGroups: true,
+	// 			},
+	// 		],
+	// 	},
+	// },
 }

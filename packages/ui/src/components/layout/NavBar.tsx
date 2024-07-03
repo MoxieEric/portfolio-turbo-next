@@ -24,7 +24,12 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
 	}, [pathname])
 
 	return (
-		<HStack alignItems='center' justifyContent='space-between' w='full'>
+		<HStack
+			alignItems='center'
+			justifyContent='space-between'
+			maxWidth={{ base: '3xl' }}
+			w='full'
+		>
 			<HStack>
 				<Link href='/'>
 					<Heading size='md'>Eric Nowels</Heading>
