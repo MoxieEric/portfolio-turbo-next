@@ -3,7 +3,7 @@ import { Box, Card, CardBody, Heading, Stack } from '@chakra-ui/react'
 import { type ReactNode } from 'react'
 
 interface FeatureCardProps extends CardProps {
-	title: string
+	title?: string
 	size?: 'sm' | 'md' | 'lg'
 	image?: ReactNode
 }
@@ -65,7 +65,12 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 					gap={sizeValues[size].padding}
 					height='full'
 				>
-					<Heading size={sizeValues[size].heading}>{title}</Heading>
+					{title ? (
+						<Heading size={sizeValues[size].heading}>
+							{title}
+						</Heading>
+					) : null}
+
 					{children}
 				</CardBody>
 			</Stack>
