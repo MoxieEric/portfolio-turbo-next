@@ -6,7 +6,11 @@ interface ScreenProps {
 }
 
 const Screen: React.FC<ScreenProps> = ({ children }) => {
-	return <VStack gap={8}>{children}</VStack>
+	return (
+		<VStack gap={8} maxWidth={{ base: '3xl' }}>
+			{children}
+		</VStack>
+	)
 }
 
 export { Screen }

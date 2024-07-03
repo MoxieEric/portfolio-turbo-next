@@ -1,4 +1,4 @@
-import { NavBarLink } from '@repo/ui/components'
+import type { NavBarLink } from '@repo/ui/components'
 
 const navigationConfig: NavBarLink[] = [
 	{

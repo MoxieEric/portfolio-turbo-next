@@ -1,6 +1,4 @@
-import { HStack, Text, VStack } from '@chakra-ui/react'
-import { Card } from '@repo/ui/components'
-import Image from 'next/image'
+import { Text, VStack } from '@chakra-ui/react'
 
 const Page: React.FC = () => {
 	return (
