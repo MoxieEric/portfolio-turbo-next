@@ -17,7 +17,7 @@ import {
 
 const Skills: React.FC = () => {
 	return (
-		<ScreenSection title='What I Do'>
+		<ScreenSection id='skills' title='What I Do'>
 			<VStack gap={4} w='full'>
 				<FeatureCard size='sm' title='Full-Stack Engineering' w='full'>
 					{Object.values(EngineeringSkillSection).map(

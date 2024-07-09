@@ -59,7 +59,7 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
 						</Link>
 					))}
 
-				<Button
+				{/* <Button
 					as='a'
 					href='https://www.linkedin.com/in/ericnowels/'
 					rel='noopener noreferrer'
@@ -67,7 +67,7 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
 					variant='link'
 				>
 					LinkedIn
-				</Button>
+				</Button> */}
 			</HStack>
 		</HStack>
 	)
