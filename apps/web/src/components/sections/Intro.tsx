@@ -48,6 +48,9 @@ const Intro: React.FC = () => {
 				</Text>
 				<HStack gap={{ base: 2, md: 4 }} pt={4}>
 					<IconButton
+						_dark={{
+							color: 'gray.50',
+						}}
 						aria-label='GitHub'
 						as='a'
 						href='https://github.com/MoxieEric'
@@ -57,6 +60,9 @@ const Intro: React.FC = () => {
 						variant='ghost'
 					/>
 					<IconButton
+						_dark={{
+							color: 'gray.50',
+						}}
 						aria-label='GitHub'
 						as='a'
 						href='https://www.linkedin.com/in/ericnowels/'
@@ -66,6 +72,9 @@ const Intro: React.FC = () => {
 						variant='ghost'
 					/>
 					<Button
+						_dark={{
+							color: 'gray.50',
+						}}
 						color='gray.900'
 						leftIcon={<Icon as={HiDocumentArrowDown} />}
 						variant='ghost'

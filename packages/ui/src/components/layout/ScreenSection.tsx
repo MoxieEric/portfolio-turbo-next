@@ -1,19 +1,20 @@
 'use client'
 
 import { Flex, Heading } from '@chakra-ui/react'
+import { LayoutDirection } from '@repo/types'
 import React, { type ReactNode } from 'react'
 
 interface ScreenSectionProps {
 	children: ReactNode
 	id?: string
-	layout?: 'row' | 'column'
+	layout?: LayoutDirection
 	title?: string
 }
 
 const ScreenSection: React.FC<ScreenSectionProps> = ({
 	children,
 	id,
-	layout = 'row',
+	layout = LayoutDirection.Row,
 	title,
 }) => {
 	return (

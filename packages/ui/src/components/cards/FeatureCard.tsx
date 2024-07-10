@@ -48,6 +48,9 @@ const FeatureCard: React.FC<FeatureCardProps> = ({
 }) => {
 	return (
 		<Card
+			_dark={{
+				bg: 'gray.700',
+			}}
 			bg='gray.50'
 			overflow='hidden'
 			p={sizeValues[size].padding}
