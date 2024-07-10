@@ -25,6 +25,17 @@ const portfolioContent: PortfolioItem[] = [
 		stack: ['Next', 'Chakra', 'GraphQL', 'TypeScript', 'Stripe'],
 	},
 	{
+		title: 'BrewMenu',
+		description:
+			'IoT powered digital menu system. Designed with the craft beverage industry in mind and seamlessles integrates into all BrewLogix apps to provide turn-key signage onn-premise and off.',
+		id: 'blx-bm',
+		company: 'BrewLogix',
+		featureImage: '/portfolio/brewmenu-stack--sm.png',
+		projectLink: 'https://app.brewlogix.com',
+		role: 'Design, UX, Development',
+		stack: ['Next', 'Chakra', 'GraphQL', 'TypeScript', 'Stripe'],
+	},
+	{
 		title: 'BrewLogix UI',
 		description:
 			'Atomic component library with interactive GUI, code samples and testing for use by suite of BrewLogix apps.',
@@ -39,16 +50,32 @@ const portfolioContent: PortfolioItem[] = [
 		description: 'Brewing website',
 		id: 'blx-ui',
 		company: 'BrewLogix',
-		featureImage: '/portfolio/brewlogix-ui--sm.png',
+		featureImage: '/portfolio/Santa-Fe-Brewing-Square-09-900x900.jpg',
 		role: 'Design, UX, Development',
 		stack: ['WordPress', 'Vue', 'GraphQL'],
+	},
+	{
+		title: 'Noodles & Company',
+		description: 'Web and mobile app for finding and ',
+		id: 'vb-at',
+		featureImage: '/portfolio/noodles-01--md.jpg',
+		stack: ['React Native', 'RNW', 'WordPress', 'GraphQL'],
 	},
 	{
 		title: 'Sierra Nevada Brewing Co.',
 		description: 'Brewing website',
 		id: 'blx-ui',
 		company: 'Sierra Nevada Brewing Company',
-		featureImage: '/portfolio/brewlogix-ui--sm.png',
+		featureImage: '/portfolio/Sierra-Nevada-Square-05-900x900.jpg',
+		role: 'Design, UX, Development',
+		stack: ['WordPress', 'Vue', 'GraphQL'],
+	},
+	{
+		title: '10 Barrel Brewing',
+		description: 'Brewing website',
+		id: 'blx-ui',
+		company: 'Sierra Nevada Brewing Company',
+		featureImage: '/portfolio/10-Barrel-Square-05-900x900.jpg',
 		role: 'Design, UX, Development',
 		stack: ['WordPress', 'Vue', 'GraphQL'],
 	},
@@ -57,31 +84,32 @@ const portfolioContent: PortfolioItem[] = [
 		description:
 			'Turn-key API documentation site providing a superior DX through intuitive type documentation, data samples and interactive API playground.',
 		id: 'blx-docs',
-		featureImage: '/portfolio/brewlogix-ui--sm.png',
+		featureImage: '/portfolio/graphydocs-01--sm.jpg',
 		stack: ['Next', 'TypeScript', 'Chakra', 'GraphQL'],
+	},
+
+	{
+		title: 'BluePoint Brewery',
+		description:
+			'Brewery website facilitating online beer and merch ordering, event bookings and plenty of easter eggs.',
+		id: 'blx-docs',
+		featureImage: '/portfolio/bluepoint-brewing-01.jpg',
+		stack: ['Vue', 'Strappi', 'Foundation', 'GraphQL', 'Shopify'],
 	},
 	{
 		title: 'ProductBoard ClickSink',
 		description:
 			'Connector plugin for syncing  ProductBoard data to ClickUp project management system and visa versa.',
 		id: 'blx-docs',
-		featureImage: '/portfolio/brewlogix-ui--sm.png',
+		featureImage: '/trans-dark.jpg',
 		stack: ['React', 'TypeScript', 'Express', 'Apollo'],
-	},
-	{
-		title: 'BluePoint Brewery',
-		description:
-			'Brewery website facilitating online beer and merch ordering, event bookings and plenty of easter eggs.',
-		id: 'blx-docs',
-		featureImage: '/portfolio/brewlogix-ui--sm.png',
-		stack: ['Vue', 'Strappi', 'Foundation', 'GraphQL', 'Shopify'],
 	},
 	{
 		title: 'Diestel Turkey',
 		description:
 			'Online shop for Diestel Family Farms, which specializes in all things turkey',
 		id: 'blx-docs',
-		featureImage: '/portfolio/brewlogix-ui--sm.png',
+		featureImage: '/trans-dark.jpg',
 		stack: ['Vue', 'Shopify Plus', 'Material'],
 	},
 	{
@@ -89,21 +117,14 @@ const portfolioContent: PortfolioItem[] = [
 		description:
 			'Web and mobile app for exploring local breweries in Bend, OR and collecting rewards along the way.',
 		id: 'vb-at',
-		featureImage: '/portfolio/brewlogix-ui--sm.png',
-		stack: ['React Native', 'WordPress', 'GraphQL'],
-	},
-	{
-		title: 'Noodles & Company',
-		description: 'Web and mobile app for finding and ',
-		id: 'vb-at',
-		featureImage: '/portfolio/brewlogix-ui--sm.png',
+		featureImage: '/trans-dark.jpg',
 		stack: ['React Native', 'WordPress', 'GraphQL'],
 	},
 	{
 		title: 'Birdcall',
 		description: 'Web and mobile app for finding and ',
 		id: 'bc-at',
-		featureImage: '/portfolio/brewlogix-ui--sm.png',
+		featureImage: '/trans-dark.jpg',
 		stack: ['React', 'TypeScript', 'Stripe', 'FramerMotion', 'WebGL'],
 	},
 	{
@@ -111,7 +132,7 @@ const portfolioContent: PortfolioItem[] = [
 		description:
 			'Marketing, onboarding and consumer feedback site for an innovative POS and contactless ordering system.',
 		id: 'arryved',
-		featureImage: '/portfolio/brewlogix-ui--sm.png',
+		featureImage: '/trans-dark.jpg',
 		stack: ['WordPress'],
 	},
 	{
@@ -119,7 +140,7 @@ const portfolioContent: PortfolioItem[] = [
 		description:
 			'Marketing, onboarding and consumer feedback site for an innovative POS and contactless ordering system.',
 		id: 'birch',
-		featureImage: '/portfolio/brewlogix-ui--sm.png',
+		featureImage: '/trans-dark.jpg',
 		stack: ['WordPress'],
 	},
 ]
