@@ -41,8 +41,9 @@ const Skills: React.FC = () => {
 													icon={skill?.icon}
 													key={skill.label}
 													shadow='sm'
-													text={skill.label}
-												/>
+												>
+													{skill.label}
+												</Pill>
 											)
 										)}
 									</Stack>
@@ -60,8 +61,9 @@ const Skills: React.FC = () => {
 								icon={skill?.icon}
 								key={skill.label}
 								shadow='sm'
-								text={skill.label}
-							/>
+							>
+								{skill.label}
+							</Pill>
 						))}
 					</Stack>
 				</FeatureCard>
@@ -74,8 +76,9 @@ const Skills: React.FC = () => {
 								icon={skill?.icon}
 								key={skill.label}
 								shadow='sm'
-								text={skill.label}
-							/>
+							>
+								{skill.label}
+							</Pill>
 						))}
 					</Stack>
 				</FeatureCard>

@@ -1,12 +1,14 @@
 import type { As, BadgeProps } from '@chakra-ui/react'
 import { Badge, Flex, Icon } from '@chakra-ui/react'
+import type { ReactNode } from 'react'
 
 interface PillProps extends BadgeProps {
-	text: string
+	text?: string
 	icon?: As
+	children?: ReactNode
 }
 
-const Pill: React.FC<PillProps> = ({ text, icon, ...props }) => {
+const Pill: React.FC<PillProps> = ({ text, icon, children, ...props }) => {
 	return (
 		<Badge
 			px={4}
@@ -18,8 +20,7 @@ const Pill: React.FC<PillProps> = ({ text, icon, ...props }) => {
 		>
 			<Flex alignItems='center' gap={2}>
 				{icon ? <Icon as={icon} /> : null}
-
-				{text}
+				{children || text}
 			</Flex>
 		</Badge>
 	)
