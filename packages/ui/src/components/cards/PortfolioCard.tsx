@@ -36,19 +36,17 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({ children, content }) => {
 				minW={48}
 				overflow='hidden'
 				rounded='xl'
-				shadow='md'
 				w={{ base: 'full', md: 48 }}
 			>
 				<Image
 					alt='BLX'
 					aspectRatio='1/1'
-					bg='gray.100'
 					loading='lazy'
 					maxW={{ base: 'full' }}
 					objectFit='cover'
 					overflow='hidden'
 					rounded='lg'
-					shadow='md'
+					shadow='none'
 					src={content.featureImage}
 					w='full'
 				/>

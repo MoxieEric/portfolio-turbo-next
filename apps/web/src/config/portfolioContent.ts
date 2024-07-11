@@ -7,7 +7,7 @@ const portfolioContent: PortfolioItem[] = [
 			'Mobile and web app that helps users find and curate craft brewery experiences from over 10k breweries and 200K products to explore. Your next brewery adventure awaits! ',
 		id: 'bdb-app',
 		company: 'BrewLogix',
-		featureImage: '/portfolio/bdb-app-grid--sm.jpg',
+		featureImage: '/portfolio/bdb-03--md.png',
 		projectLink:
 			'https://apps.apple.com/us/app/brewerydb-by-brewlogix/id6449491682',
 		role: 'Design, UX, Development',
@@ -19,10 +19,21 @@ const portfolioContent: PortfolioItem[] = [
 			'IoT powered draft management system that unlocks potential and profitability through AI and ML powered business insights and comprehensive operational tools.',
 		id: 'pp-app',
 		company: 'BrewLogix',
-		featureImage: '/portfolio/performance-platform-stack-01.png',
+		featureImage: '/portfolio/pp-01--md.png',
 		projectLink: 'https://app.brewlogix.com',
 		role: 'Design, UX, Development',
 		stack: ['Next', 'Chakra', 'GraphQL', 'TypeScript', 'Stripe'],
+	},
+	{
+		title: 'MarketMyBrewery',
+		description:
+			'Free 360 marketing app to help craft producers promote their brand, locations and products to craft-seeking consumers. ',
+		id: 'pp-app',
+		company: 'BrewLogix',
+		featureImage: '/portfolio/mmb-01--md.png',
+		projectLink: 'https://www.marketmybrewery.com',
+		role: 'Design, UX, Development',
+		stack: ['Next', 'Tailwind', 'GraphQL', 'TypeScript'],
 	},
 	{
 		title: 'BrewMenu',
@@ -30,7 +41,7 @@ const portfolioContent: PortfolioItem[] = [
 			'IoT powered digital menu system. Designed with the craft beverage industry in mind and seamlessles integrates into all BrewLogix apps to provide turn-key signage onn-premise and off.',
 		id: 'blx-bm',
 		company: 'BrewLogix',
-		featureImage: '/portfolio/brewmenu-stack--sm.png',
+		featureImage: '/portfolio/brewmenu-01--md.png',
 		projectLink: 'https://app.brewlogix.com',
 		role: 'Design, UX, Development',
 		stack: ['Next', 'Chakra', 'GraphQL', 'TypeScript', 'Stripe'],
@@ -41,25 +52,34 @@ const portfolioContent: PortfolioItem[] = [
 			'Atomic component library with interactive GUI, code samples and testing for use by suite of BrewLogix apps.',
 		id: 'blx-ui',
 		company: 'BrewLogix',
-		featureImage: '/portfolio/brewlogix-ui--sm.png',
+		featureImage: '/portfolio/blx-ui--md.jpg',
 		role: 'Design, UX, Development',
-		stack: ['React', 'Storybook', 'Tailwind', 'TypeScript', 'Jest'],
+		stack: [
+			'React',
+			'Storybook',
+			'Tailwind',
+			'TypeScript',
+			'Jest',
+			'Figma',
+		],
 	},
 	{
 		title: 'Santa Fe Brewing Co.',
-		description: 'Brewing website',
+		description:
+			"Animated, irreverent and unapoligetic website for New Mexico's O.G. brewery. Plus some operational goodies in the form of a web app ;)",
 		id: 'blx-ui',
 		company: 'BrewLogix',
 		featureImage: '/portfolio/Santa-Fe-Brewing-Square-09-900x900.jpg',
 		role: 'Design, UX, Development',
-		stack: ['WordPress', 'Vue', 'GraphQL'],
+		stack: ['WordPress', 'Vue', 'GraphQL', 'Dropbox', 'Auth0'],
 	},
 	{
 		title: 'Noodles & Company',
-		description: 'Web and mobile app for finding and ',
+		description:
+			'Ordering app and marketing website for national fast casual restaurant with more than 120 locations nationwide. ',
 		id: 'vb-at',
 		featureImage: '/portfolio/noodles-01--md.jpg',
-		stack: ['React Native', 'RNW', 'WordPress', 'GraphQL'],
+		stack: ['React Native', 'RNW', 'WordPress', 'GraphQL', 'OLO'],
 	},
 	{
 		title: 'Sierra Nevada Brewing Co.',
@@ -86,7 +106,7 @@ const portfolioContent: PortfolioItem[] = [
 		description:
 			'Turn-key API documentation site providing a superior DX through intuitive type documentation, data samples and interactive API playground.',
 		id: 'blx-docs',
-		featureImage: '/portfolio/graphydocs-01--sm.jpg',
+		featureImage: '/portfolio/docs-01--md.png',
 		stack: ['Next', 'TypeScript', 'Chakra', 'GraphQL'],
 	},
 	{
@@ -94,7 +114,7 @@ const portfolioContent: PortfolioItem[] = [
 		description:
 			'Brewery website facilitating online beer and merch ordering, event bookings and plenty of easter eggs.',
 		id: 'blx-docs',
-		featureImage: '/portfolio/bluepoint-brewing-01.jpg',
+		featureImage: '/portfolio/blue-point-brewing-01--md.png',
 		stack: ['Vue', 'Strappi', 'Foundation', 'GraphQL', 'Shopify'],
 	},
 	{
@@ -102,15 +122,15 @@ const portfolioContent: PortfolioItem[] = [
 		description:
 			'Connector plugin for syncing  ProductBoard data to ClickUp project management system and visa versa.',
 		id: 'blx-docs',
-		featureImage: '/trans-dark.jpg',
+		featureImage: '/portfolio/clickSync-01--md.jpg',
 		stack: ['React', 'TypeScript', 'Express', 'Apollo'],
 	},
 	{
 		title: 'Diestel Turkey',
 		description:
-			'Online shop for Diestel Family Farms, which specializes in all things turkey',
+			'Online shop for Diestel Family Farms, which specializes in all things turkey.',
 		id: 'blx-docs',
-		featureImage: '/trans-dark.jpg',
+		featureImage: '/portfolio/diestel-01--md.png',
 		stack: ['Vue', 'Shopify Plus', 'Material'],
 	},
 	{
@@ -118,40 +138,8 @@ const portfolioContent: PortfolioItem[] = [
 		description:
 			'Web and mobile app for exploring local breweries in Bend, OR and collecting rewards along the way.',
 		id: 'vb-at',
-		featureImage: '/trans-dark.jpg',
+		featureImage: '/portfolio/ale-trail-01--md.png',
 		stack: ['React Native', 'WordPress', 'GraphQL'],
-	},
-	{
-		title: 'Poncho POS',
-		description:
-			"Birdcall's popriatery mobile app powering their POS, FOH, BOH, loyalty and employee operations for dozens of Birdcall locations on 3 continents.",
-		id: 'bc-at',
-		featureImage: '/trans-dark.jpg',
-		stack: ['React Native', 'TypeScript', 'Stripe'],
-	},
-	{
-		title: 'Arryved',
-		description:
-			'Marketing, onboarding and consumer feedback site for an innovative POS and contactless ordering system.',
-		id: 'arryved',
-		featureImage: '/trans-dark.jpg',
-		stack: ['WordPress', 'Bootstrap'],
-	},
-	{
-		title: 'Birch Benders',
-		description:
-			'Marketing, onboarding and consumer feedback site for an innovative POS and contactless ordering system.',
-		id: 'birch',
-		featureImage: '/trans-dark.jpg',
-		stack: ['Shopify Plus'],
-	},
-	{
-		title: 'Insa',
-		description:
-			'Online shop for medical and recreational canibus compliant with regulations of 5 states.',
-		id: 'blx-docs',
-		featureImage: '/trans-dark.jpg',
-		stack: ['Vue', 'Dutchie', 'MySql', 'Material'],
 	},
 ]
 
