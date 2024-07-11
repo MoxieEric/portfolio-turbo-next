@@ -63,7 +63,8 @@ const portfolioContent: PortfolioItem[] = [
 	},
 	{
 		title: 'Sierra Nevada Brewing Co.',
-		description: 'Brewing website',
+		description:
+			'Immersive website balancing the showcase of 4+ decades of beer history and culture with the brass tacks: finding fresh beer.',
 		id: 'blx-ui',
 		company: 'Sierra Nevada Brewing Company',
 		featureImage: '/portfolio/Sierra-Nevada-Square-05-900x900.jpg',
@@ -72,9 +73,10 @@ const portfolioContent: PortfolioItem[] = [
 	},
 	{
 		title: '10 Barrel Brewing',
-		description: 'Brewing website',
+		description:
+			"Brewing website that's as wild as the crew behind the beer.",
 		id: 'blx-ui',
-		company: 'Sierra Nevada Brewing Company',
+		company: '10 Barrel Brewing',
 		featureImage: '/portfolio/10-Barrel-Square-05-900x900.jpg',
 		role: 'Design, UX, Development',
 		stack: ['WordPress', 'Vue', 'GraphQL'],
@@ -87,7 +89,6 @@ const portfolioContent: PortfolioItem[] = [
 		featureImage: '/portfolio/graphydocs-01--sm.jpg',
 		stack: ['Next', 'TypeScript', 'Chakra', 'GraphQL'],
 	},
-
 	{
 		title: 'BluePoint Brewery',
 		description:
@@ -121,11 +122,12 @@ const portfolioContent: PortfolioItem[] = [
 		stack: ['React Native', 'WordPress', 'GraphQL'],
 	},
 	{
-		title: 'Birdcall',
-		description: 'Web and mobile app for finding and ',
+		title: 'Poncho POS',
+		description:
+			"Birdcall's popriatery mobile app powering their POS, FOH, BOH, loyalty and employee operations for dozens of Birdcall locations on 3 continents.",
 		id: 'bc-at',
 		featureImage: '/trans-dark.jpg',
-		stack: ['React', 'TypeScript', 'Stripe', 'FramerMotion', 'WebGL'],
+		stack: ['React Native', 'TypeScript', 'Stripe'],
 	},
 	{
 		title: 'Arryved',
@@ -133,7 +135,7 @@ const portfolioContent: PortfolioItem[] = [
 			'Marketing, onboarding and consumer feedback site for an innovative POS and contactless ordering system.',
 		id: 'arryved',
 		featureImage: '/trans-dark.jpg',
-		stack: ['WordPress'],
+		stack: ['WordPress', 'Bootstrap'],
 	},
 	{
 		title: 'Birch Benders',
@@ -141,7 +143,15 @@ const portfolioContent: PortfolioItem[] = [
 			'Marketing, onboarding and consumer feedback site for an innovative POS and contactless ordering system.',
 		id: 'birch',
 		featureImage: '/trans-dark.jpg',
-		stack: ['WordPress'],
+		stack: ['Shopify Plus'],
+	},
+	{
+		title: 'Insa',
+		description:
+			'Online shop for medical and recreational canibus compliant with regulations of 5 states.',
+		id: 'blx-docs',
+		featureImage: '/trans-dark.jpg',
+		stack: ['Vue', 'Dutchie', 'MySql', 'Material'],
 	},
 ]
 
