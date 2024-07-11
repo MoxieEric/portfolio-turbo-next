@@ -31,12 +31,14 @@ import {
 	SiFigma,
 	SiGithubactions,
 	SiGraphql,
+	SiHal,
 	SiHasura,
 	SiHtml5,
 	SiHyper,
 	SiJavascript,
 	SiJest,
 	SiJira,
+	SiKeepachangelog,
 	SiMysql,
 	SiNetlify,
 	SiNextdotjs,
@@ -99,16 +101,16 @@ const engineerSkillsConfig: Record<EngineeringSkillSection, SkillConfig[]> = {
 			icon: SiReactos,
 		},
 		{
-			label: 'Vue',
-			icon: SiVuedotjs,
+			label: 'Next.js',
+			icon: SiNextdotjs,
 		},
 		{
 			label: 'GraphQL',
 			icon: SiGraphql,
 		},
 		{
-			label: 'Next.js',
-			icon: SiNextdotjs,
+			label: 'Vue',
+			icon: SiVuedotjs,
 		},
 		{
 			label: 'Nuxt.js',
@@ -189,10 +191,6 @@ const engineerSkillsConfig: Record<EngineeringSkillSection, SkillConfig[]> = {
 			icon: SiMysql,
 		},
 		{
-			label: 'Postgres',
-			icon: SiPostgresql,
-		},
-		{
 			label: 'AWS DynamoDB',
 			icon: SiAmazondynamodb,
 		},
@@ -233,6 +231,14 @@ const engineerSkillsConfig: Record<EngineeringSkillSection, SkillConfig[]> = {
 		{
 			label: 'Hypertune',
 			icon: SiHyper,
+		},
+		{
+			label: 'Husky',
+			icon: SiHal,
+		},
+		{
+			label: 'Changesets',
+			icon: SiKeepachangelog,
 		},
 		{
 			label: 'Datadog',
