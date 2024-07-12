@@ -13,12 +13,13 @@ const UiProvider: React.FC<UiProviderProps> = ({ children }) => {
 	return (
 		<ChakraProvider colorModeManager={cookieStorageManager}>
 			<VStack
-				as='main'
-				px={{ base: 4, md: 8 }}
-				py={4}
 				alignItems='center'
+				as='main'
 				gap={{ base: 4, md: 8 }}
 				justifyContent='center'
+				pb={4}
+				pt={24}
+				px={{ base: 4, md: 8 }}
 				w='full'
 			>
 				<NavBar links={navigationConfig} />
