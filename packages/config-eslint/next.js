@@ -42,6 +42,7 @@ module.exports = {
 	},
 	ignorePatterns: ['node_modules/', 'dist/'],
 	rules: {
+		'@typescript-eslint/no-unnecessary-condition': 'off',
 		'import/no-default-export': 'off',
 		'react/function-component-definition': [
 			'error',
@@ -61,20 +62,21 @@ module.exports = {
 			},
 		],
 	},
-	overrides: {
-		rules: {
-			'sort-imports': [
-				'warn',
-				{
-					memberSyntaxSortOrder: [
-						'none',
-						'all',
-						'multiple',
-						'single',
-					],
-					allowSeparatedGroups: true,
-				},
-			],
-		},
-	},
+	overrides,
+	// overrides: {
+	// 	rules: {
+	// 		'sort-imports': [
+	// 			'warn',
+	// 			{
+	// 				memberSyntaxSortOrder: [
+	// 					'none',
+	// 					'all',
+	// 					'multiple',
+	// 					'single',
+	// 				],
+	// 				allowSeparatedGroups: true,
+	// 			},
+	// 		],
+	// 	},
+	// },
 }
