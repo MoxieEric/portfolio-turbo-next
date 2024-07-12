@@ -11,8 +11,7 @@ const navigationConfig: NavBarLink[] = [
 	},
 	{
 		label: 'Portfolio',
-		path: '/portfolio',
-		disabled: true,
+		path: '#portfolio',
 	},
 ]
 

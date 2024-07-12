@@ -1,12 +1,7 @@
 'use client'
 
-import { Stack, VStack } from '@chakra-ui/react'
-import {
-	FeatureCard,
-	Pill,
-	ScreenSection,
-	SimpleCard,
-} from '@repo/ui/components'
+import { VStack } from '@chakra-ui/react'
+import { FeatureCard, ScreenSection, SimpleCard } from '@repo/ui/components'
 import React from 'react'
 import {
 	EngineeringSkillSection,
@@ -14,6 +9,7 @@ import {
 	mgmtSkillsConfig,
 	uxSkillsConfig,
 } from '../../config/skillsConfig'
+import SkillGroup from '../skills/SkillGroup'
 
 const Skills: React.FC = () => {
 	return (
@@ -27,57 +23,21 @@ const Skills: React.FC = () => {
 									key={skillSection}
 									title={skillSection}
 								>
-									<Stack
-										flexDirection='row'
-										flexWrap='wrap'
-										gap={2}
-										pt={2}
-									>
-										{engineerSkillsConfig[skillSection].map(
-											(skill) => (
-												<Pill
-													bg='gray.200'
-													color='teal.600'
-													icon={skill?.icon}
-													key={skill.label}
-													shadow='sm'
-													text={skill.label}
-												/>
-											)
-										)}
-									</Stack>
+									<SkillGroup
+										skillGroup={
+											engineerSkillsConfig[skillSection]
+										}
+									/>
 								</SimpleCard>
 							)
 						}
 					)}
 				</FeatureCard>
 				<FeatureCard size='sm' title='UX & Product Design' w='full'>
-					<Stack flexDirection='row' flexWrap='wrap' gap={2} pt={2}>
-						{uxSkillsConfig.map((skill) => (
-							<Pill
-								bg='gray.200'
-								color='purple.600'
-								icon={skill?.icon}
-								key={skill.label}
-								shadow='sm'
-								text={skill.label}
-							/>
-						))}
-					</Stack>
+					<SkillGroup skillGroup={uxSkillsConfig} />
 				</FeatureCard>
 				<FeatureCard size='sm' title='Management' w='full'>
-					<Stack flexDirection='row' flexWrap='wrap' gap={2} pt={2}>
-						{mgmtSkillsConfig.map((skill) => (
-							<Pill
-								bg='gray.200'
-								color='green.600'
-								icon={skill?.icon}
-								key={skill.label}
-								shadow='sm'
-								text={skill.label}
-							/>
-						))}
-					</Stack>
+					<SkillGroup skillGroup={mgmtSkillsConfig} />
 				</FeatureCard>
 			</VStack>
 		</ScreenSection>
