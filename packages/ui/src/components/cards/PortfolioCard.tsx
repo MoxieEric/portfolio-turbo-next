@@ -62,7 +62,7 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({ children, content }) => {
 					<Text fontSize='lg'>{content.description}</Text>
 				</VStack>
 
-				<HStack>
+				<HStack flexWrap='wrap' w='full'>
 					{content.stack?.map((skill) => (
 						<Pill key={skill} size='sm'>
 							{skill}

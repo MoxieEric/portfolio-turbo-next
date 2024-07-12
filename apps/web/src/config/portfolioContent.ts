@@ -60,7 +60,7 @@ const portfolioContent: PortfolioItem[] = [
 			'Tailwind',
 			'TypeScript',
 			'Jest',
-			'Figma',
+			// 'Figma',
 		],
 	},
 	{
