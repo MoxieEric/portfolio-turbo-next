@@ -1,4 +1,3 @@
-import '@repo/ui/styles.css'
 import type { Metadata } from 'next'
 import { Aleo } from 'next/font/google'
 import UiProvider from '../components/providers/UiProvider'

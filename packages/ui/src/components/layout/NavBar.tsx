@@ -63,7 +63,7 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
 						.map((link: NavBarLink) => (
 							<Link href={link.path} key={link.path}>
 								<Button
-									color='teal.500'
+									color='teal.600'
 									isActive={link.path === pathname}
 									variant='link'
 								>
