@@ -63,24 +63,14 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
 						.map((link: NavBarLink) => (
 							<Link href={link.path} key={link.path}>
 								<Button
+									color='teal.500'
 									isActive={link.path === pathname}
 									variant='link'
-									color='teal.500'
 								>
 									{link.label}
 								</Button>
 							</Link>
 						))}
-
-					{/* <Button
-					as='a'
-					href='https://www.linkedin.com/in/ericnowels/'
-					rel='noopener noreferrer'
-					target='_blank'
-					variant='link'
-				>
-					LinkedIn
-				</Button> */}
 				</HStack>
 			</HStack>
 		</HStack>
