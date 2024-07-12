@@ -1,7 +1,9 @@
 import type { As } from '@chakra-ui/react'
 import {
+	FaChartBar,
 	FaChartGantt,
 	FaHandPointer,
+	FaRoute,
 	FaUserGraduate,
 	FaWheelchair,
 } from 'react-icons/fa6'
@@ -17,6 +19,8 @@ import {
 	HiUser,
 } from 'react-icons/hi2'
 import {
+	SiAdobephotoshop,
+	SiAdobexd,
 	SiAmazondynamodb,
 	SiApollographql,
 	SiAwsamplify,
@@ -47,6 +51,7 @@ import {
 	SiOctopusdeploy,
 	SiPhp,
 	SiPostgresql,
+	SiProducthunt,
 	SiPython,
 	SiReact,
 	SiReactos,
@@ -276,6 +281,18 @@ const uxSkillsConfig: SkillConfig[] = [
 		label: 'Accesibility Compliance',
 		icon: FaWheelchair,
 	},
+	{
+		label: 'Axure',
+		icon: FaChartBar,
+	},
+	{
+		label: 'XD',
+		icon: SiAdobexd,
+	},
+	{
+		label: 'Photoshop',
+		icon: SiAdobephotoshop,
+	},
 ]
 const mgmtSkillsConfig: SkillConfig[] = [
 	{
@@ -291,19 +308,19 @@ const mgmtSkillsConfig: SkillConfig[] = [
 		icon: HiRefresh,
 	},
 	{
-		label: 'ClickUp',
-		icon: SiClickup,
-	},
-	{
-		label: 'Jira',
-		icon: SiJira,
-	},
-	{
 		label: 'Roadmapping',
 		icon: FaChartGantt,
 	},
 	{
-		label: 'Profesional Development',
+		label: 'Mentoring',
+		icon: FaUserGraduate,
+	},
+	{
+		label: 'Leadership',
+		icon: FaRoute,
+	},
+	{
+		label: 'Mentoring',
 		icon: FaUserGraduate,
 	},
 	{
@@ -311,12 +328,20 @@ const mgmtSkillsConfig: SkillConfig[] = [
 		icon: HiCodeBracket,
 	},
 	{
-		label: 'Data Analysis',
-		icon: HiPresentationChartLine,
+		label: 'Jira',
+		icon: SiJira,
 	},
 	{
-		label: 'User Research',
-		icon: HiUser,
+		label: 'ClickUp',
+		icon: SiClickup,
+	},
+	{
+		label: 'ProductBoard',
+		icon: SiProducthunt,
+	},
+	{
+		label: 'Data Analysis',
+		icon: HiPresentationChartLine,
 	},
 	{
 		label: 'User Research',
