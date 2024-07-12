@@ -89,7 +89,7 @@ const portfolioContent: PortfolioItem[] = [
 		company: 'Sierra Nevada Brewing Company',
 		featureImage: '/portfolio/Sierra-Nevada-Square-05-900x900.jpg',
 		role: 'Design, UX, Development',
-		stack: ['WordPress', 'Vue', 'GraphQL'],
+		stack: ['WordPress', 'Angular', 'Shopify'],
 	},
 	{
 		title: '10 Barrel Brewing',
@@ -128,7 +128,7 @@ const portfolioContent: PortfolioItem[] = [
 	{
 		title: 'Diestel Turkey',
 		description:
-			'Online shop for Diestel Family Farms, which specializes in all things turkey.',
+			'Online shop for Diestel Family Farms, purveyors of all things turkey since 1949.',
 		id: 'blx-docs',
 		featureImage: '/portfolio/diestel-01--md.png',
 		stack: ['Vue', 'Shopify Plus', 'Material'],
@@ -139,7 +139,7 @@ const portfolioContent: PortfolioItem[] = [
 			'Web and mobile app for exploring local breweries in Bend, OR and collecting rewards along the way.',
 		id: 'vb-at',
 		featureImage: '/portfolio/ale-trail-01--md.png',
-		stack: ['React Native', 'WordPress', 'GraphQL'],
+		stack: ['React Native', 'WordPress', 'GraphQL', 'Expo'],
 	},
 ]
 

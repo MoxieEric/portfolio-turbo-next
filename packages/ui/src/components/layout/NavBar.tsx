@@ -26,48 +26,52 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
 	return (
 		<HStack
 			alignItems='center'
-			justifyContent='space-between'
-			maxWidth={{ base: '3xl' }}
+			bg='white'
+			justifyContent='center'
+			left={0}
+			p={4}
+			position='fixed'
+			right={0}
+			top={0}
 			w='full'
+			zIndex={9}
 		>
-			<HStack>
-				<Link href='/'>
-					<Heading size='md'>Eric Nowels</Heading>
-				</Link>
-				{title ? (
-					<>
-						<span>/</span>
-						<Heading fontFamily='mono' size='sm'>
-							{title}
-						</Heading>
-					</>
-				) : (
-					''
-				)}
-			</HStack>
-			<HStack>
-				{links
-					.filter((link) => !link.disabled)
-					.map((link: NavBarLink) => (
-						<Link href={link.path} key={link.path}>
-							<Button
-								isActive={link.path === pathname}
-								variant='link'
-							>
-								{link.label}
-							</Button>
-						</Link>
-					))}
-
-				{/* <Button
-					as='a'
-					href='https://www.linkedin.com/in/ericnowels/'
-					rel='noopener noreferrer'
-					target='_blank'
-					variant='link'
-				>
-					LinkedIn
-				</Button> */}
+			<HStack
+				alignItems='center'
+				justifyContent='space-between'
+				maxWidth={{ base: '3xl' }}
+				w='full'
+			>
+				<HStack>
+					<Link href='/'>
+						<Heading size='md'>Eric Nowels</Heading>
+					</Link>
+					{title ? (
+						<>
+							<span>/</span>
+							<Heading fontFamily='mono' size='sm'>
+								{title}
+							</Heading>
+						</>
+					) : (
+						''
+					)}
+				</HStack>
+				<HStack>
+					{links
+						.filter((link) => !link.disabled)
+						.map((link: NavBarLink) => (
+							<Link href={link.path} key={link.path}>
+								<Button
+									color='teal.500'
+									isActive={link.path === pathname}
+									variant='link'
+								>
+									{link.label}
+								</Button>
+							</Link>
+						))}
+				</HStack>
 			</HStack>
 		</HStack>
 	)

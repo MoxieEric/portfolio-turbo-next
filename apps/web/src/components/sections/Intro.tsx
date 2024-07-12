@@ -2,7 +2,6 @@
 
 import {
 	Box,
-	Button,
 	Flex,
 	HStack,
 	Icon,
@@ -10,12 +9,34 @@ import {
 	Image,
 	Text,
 } from '@chakra-ui/react'
+import type { UiLink } from '@repo/types'
 import { FeatureCard } from '@repo/ui/components'
 import React from 'react'
-import { HiDocumentArrowDown } from 'react-icons/hi2'
-import { SiGithub, SiLinkedin } from 'react-icons/si'
+import { SiFlickr, SiGithub, SiLinkedin, SiYoutube } from 'react-icons/si'
 
 const Intro: React.FC = () => {
+	const links: UiLink[] = [
+		{
+			label: 'Github',
+			url: 'https://github.com/MoxieEric',
+			icon: SiGithub,
+		},
+		{
+			label: 'LinkedIn',
+			url: 'https://www.linkedin.com/in/ericnowels/',
+			icon: SiLinkedin,
+		},
+		{
+			label: 'Youtube',
+			url: 'https://www.youtube.com/channel/UCwxLkzObJ3A8n1q4QfMO7QQ',
+			icon: SiYoutube,
+		},
+		{
+			label: 'Flickr',
+			url: 'https://www.flickr.com/photos/iheartfixedgear/albums/',
+			icon: SiFlickr,
+		},
+	]
 	return (
 		<Flex flexDirection={{ base: 'column', md: 'row' }} gap={4}>
 			<Box
@@ -43,44 +64,25 @@ const Intro: React.FC = () => {
 				w='full'
 			>
 				<Text fontSize='xl'>
-					I{`'`}m a creative full-stack engineer with a passion for
-					building products that make a difference.
+					I{`'`}m Eric, a creative full-stack engineer with a passion
+					for building products that make a difference.
 				</Text>
 				<HStack gap={{ base: 2, md: 4 }} pt={4}>
-					<IconButton
-						_dark={{
-							color: 'gray.50',
-						}}
-						aria-label='GitHub'
-						as='a'
-						href='https://github.com/MoxieEric'
-						icon={<Icon as={SiGithub} boxSize={5} />}
-						rounded='full'
-						target='_blank'
-						variant='ghost'
-					/>
-					<IconButton
-						_dark={{
-							color: 'gray.50',
-						}}
-						aria-label='GitHub'
-						as='a'
-						href='https://www.linkedin.com/in/ericnowels/'
-						icon={<Icon as={SiLinkedin} boxSize={5} />}
-						rounded='full'
-						target='_blank'
-						variant='ghost'
-					/>
-					<Button
-						_dark={{
-							color: 'gray.50',
-						}}
-						color='gray.900'
-						leftIcon={<Icon as={HiDocumentArrowDown} />}
-						variant='ghost'
-					>
-						Download CV
-					</Button>
+					{links.map((link) => (
+						<IconButton
+							_dark={{
+								color: 'gray.50',
+							}}
+							aria-label={link.label}
+							as='a'
+							href={link.url}
+							icon={<Icon as={link.icon} boxSize={5} />}
+							key={link.url}
+							rounded='full'
+							target='_blank'
+							variant='ghost'
+						/>
+					))}
 				</HStack>
 			</FeatureCard>
 		</Flex>
