@@ -38,7 +38,7 @@ const SkillGroup: React.FC<SkillGroupProps> = ({ skillGroup }) => {
 			</Collapse>
 			<HStack alignItems='center' justifyContent='flex-start' w='full'>
 				<Button
-					color='teal.500'
+					color='teal.600'
 					onClick={onToggle}
 					px={1}
 					rightIcon={
