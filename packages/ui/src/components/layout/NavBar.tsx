@@ -1,6 +1,6 @@
 'use client'
 
-import { Button, HStack, Heading } from '@chakra-ui/react'
+import { Button, ChakraProps, HStack, Heading } from '@chakra-ui/react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
@@ -18,7 +18,11 @@ interface NavBarProps {
 const NavBar: React.FC<NavBarProps> = ({ links }) => {
 	const pathname = usePathname()
 	const [title, setTitle] = useState<string>()
-
+	const printStyles: ChakraProps['sx'] = {
+		'@media print': {
+			display: 'none',
+		},
+	}
 	useEffect(() => {
 		setTitle(links.find((link) => link.path === pathname)?.label)
 	}, [pathname, links])
@@ -32,6 +36,7 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
 			p={4}
 			position='fixed'
 			right={0}
+			sx={printStyles}
 			top={0}
 			w='full'
 			zIndex={9}
