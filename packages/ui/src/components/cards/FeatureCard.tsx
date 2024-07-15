@@ -33,8 +33,7 @@ const sizeValues = {
 			md: 6,
 		},
 		heading: {
-			base: 'xl',
-			md: '2xl',
+			base: '2xl',
 		},
 	},
 }
