@@ -3,7 +3,11 @@ import type { BoxProps } from '@chakra-ui/react'
 import { Box, Square, keyframes } from '@chakra-ui/react'
 import React from 'react'
 
-const Blob: React.FC<BoxProps> = ({ ...props }) => {
+interface BlobProps extends BoxProps {
+	animate?: boolean
+}
+
+const Blob: React.FC<BlobProps> = ({ animate = true, ...props }) => {
 	const spin = keyframes`  
 	from {transform: rotate(0deg);}   
 	to {transform: rotate(360deg);}`
@@ -13,6 +17,7 @@ const Blob: React.FC<BoxProps> = ({ ...props }) => {
 		<Box
 			bottom={0}
 			filter='auto'
+			// eslint-disable-next-line react/jsx-sort-props -- blur must be after filter prop
 			blur='80px'
 			h='full'
 			left={0}
@@ -21,10 +26,11 @@ const Blob: React.FC<BoxProps> = ({ ...props }) => {
 			top={16}
 			w='full'
 			zIndex={-1}
+			{...props}
 		>
 			<Box height='100vh' letterSpacing={-64} position='relative'>
 				<Square
-					animation={spinAnimation}
+					animation={animate ? spinAnimation : ''}
 					bgGradient='linear(to-r, teal.100, yellow.50)'
 					bottom={{ base: -72, md: -64 }}
 					position='absolute'
@@ -32,7 +38,7 @@ const Blob: React.FC<BoxProps> = ({ ...props }) => {
 					size='2xl'
 				/>
 				<Square
-					animation={spinAnimation}
+					animation={animate ? spinAnimation : ''}
 					bgGradient='linear(to-r, pink.100, transparent)'
 					bottom={{ base: -72, md: -64 }}
 					left={{ base: -72, md: -48 }}

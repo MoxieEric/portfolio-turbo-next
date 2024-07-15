@@ -312,10 +312,6 @@ const mgmtSkillsConfig: SkillConfig[] = [
 		icon: FaChartGantt,
 	},
 	{
-		label: 'Mentoring',
-		icon: FaUserGraduate,
-	},
-	{
 		label: 'Leadership',
 		icon: FaRoute,
 	},

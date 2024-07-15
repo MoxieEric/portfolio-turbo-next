@@ -59,7 +59,7 @@ const Intro: React.FC = () => {
 			<FeatureCard
 				display='flex'
 				flexDirection='column'
-				size='lg'
+				sizeKey='lg'
 				title='Hi There! 👋'
 				w='full'
 			>
