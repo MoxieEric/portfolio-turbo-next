@@ -6,7 +6,11 @@ interface PaperProps {
 }
 
 const Paper: React.FC<PaperProps> = ({ children }) => {
-	return <VStack gap={8}>{children}</VStack>
+	return (
+		<VStack alignItems='start' gap={4} w='full'>
+			{children}
+		</VStack>
+	)
 }
 
 export { Paper }

@@ -1,28 +1,14 @@
-import type { ReactNode } from 'react'
+import { EmploymentType } from '@repo/types'
+import type { TimelineItem } from '@repo/ui/components'
 
-enum ExperienceType {
-	FullTime = 'Full-Time',
-	Contract = 'Contract',
-}
-
-interface ExperienceEntry {
-	title: string
-	companyName: string
-	location: string
-	isRemote?: boolean
-	dateRange: string
-	logo?: ReactNode
-	type: ExperienceType
-}
-
-const experienceConfig: ExperienceEntry[] = [
+const experienceConfig: TimelineItem[] = [
 	{
 		title: 'Director of UX | Senior Engineer',
 		companyName: 'BrewLogix',
 		location: 'Indianapolis, IA',
 		isRemote: true,
 		dateRange: 'Dec. 2021 - June 2024',
-		type: ExperienceType.FullTime,
+		type: EmploymentType.FullTime,
 	},
 	{
 		title: 'Senior Interactive Director',
@@ -30,7 +16,7 @@ const experienceConfig: ExperienceEntry[] = [
 		location: 'Boulder, CO',
 		isRemote: false,
 		dateRange: '2013 - 2021',
-		type: ExperienceType.Contract,
+		type: EmploymentType.Contract,
 	},
 	{
 		title: 'Senior Engineer',
@@ -38,7 +24,7 @@ const experienceConfig: ExperienceEntry[] = [
 		location: 'Boulder, CO',
 		isRemote: false,
 		dateRange: '2012 - 2013',
-		type: ExperienceType.Contract,
+		type: EmploymentType.Contract,
 	},
 	{
 		title: 'Front-End Engineer',
@@ -46,7 +32,7 @@ const experienceConfig: ExperienceEntry[] = [
 		location: 'Boulder, CO',
 		isRemote: false,
 		dateRange: '2011 - 2012',
-		type: ExperienceType.FullTime,
+		type: EmploymentType.FullTime,
 	},
 	{
 		title: 'Web Producer | Developer',
@@ -54,15 +40,15 @@ const experienceConfig: ExperienceEntry[] = [
 		location: 'New York, NY',
 		isRemote: false,
 		dateRange: '2006 - 2011',
-		type: ExperienceType.FullTime,
+		type: EmploymentType.FullTime,
 	},
 	{
 		title: 'Photographer',
-		companyName: 'Rolling Stone, SPIN, Pitchfork, Vogue, et al.',
+		companyName: 'Rolling Stone, SPIN, Pitchfork, et al.',
 		location: '',
 		isRemote: false,
 		dateRange: '2005 - 2012',
-		type: ExperienceType.FullTime,
+		type: EmploymentType.FullTime,
 	},
 	{
 		title: 'B.F.A. Photography',
@@ -70,9 +56,8 @@ const experienceConfig: ExperienceEntry[] = [
 		location: 'Brooklyn, NY',
 		isRemote: false,
 		dateRange: '2003 - 2007',
-		type: ExperienceType.FullTime,
+		type: EmploymentType.FullTime,
 	},
 ]
 
 export { experienceConfig }
-export type { ExperienceEntry }

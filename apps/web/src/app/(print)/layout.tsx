@@ -6,12 +6,12 @@ import { Blob, Paper } from '@repo/ui/components'
 const Layout = ({ children }: { children: React.ReactNode }): JSX.Element => {
 	return (
 		<>
-			<Blob />
+			<Blob animate={false} />
 			<VStack
-				alignItems='center'
+				alignItems='start'
 				as='main'
 				gap={{ base: 4, md: 8 }}
-				justifyContent='center'
+				justifyContent='start'
 				p={4}
 				w='full'
 			>

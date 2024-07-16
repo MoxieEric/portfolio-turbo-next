@@ -16,16 +16,16 @@ import React from 'react'
 import { PiMountains } from 'react-icons/pi'
 import type { KeyWords } from '../../config/resumeHeaderConfig'
 import { resumeHeaderConfig } from '../../config/resumeHeaderConfig'
+import Contacts from './Contacts'
 
 const ResumeHeader: React.FC = () => {
 	const chunks = useHighlight({
 		text: resumeHeaderConfig.body,
 		query: resumeHeaderConfig.keywords,
 	})
-
 	return (
-		<Flex flexDirection={{ sm: 'column', md: 'row' }} gap={4}>
-			<Box h='full' overflow='hidden' rounded='xl' shadow='sm' w={56}>
+		<Flex flexDirection='row' gap={4} w='full'>
+			<Box h='full' overflow='hidden' rounded='xl' shadow='sm' w={48}>
 				<Image
 					alt='Headshot of Eric Nowels'
 					height='full'
@@ -39,12 +39,14 @@ const ResumeHeader: React.FC = () => {
 				display='flex'
 				flexDirection='column'
 				justifyContent='space-between'
-				sizeKey='lg'
+				rounded='xl'
+				size='lg'
+				sizeKey='sm'
 				w='full'
 			>
-				<Heading size='xl'>{resumeHeaderConfig.title}</Heading>
+				<Heading size='lg'>{resumeHeaderConfig.title}</Heading>
 				<VStack alignItems='start' gap={6}>
-					<Heading color='gray.600' lineHeight='tall' size='md'>
+					<Heading color='gray.600' lineHeight='tall' size='sm'>
 						{chunks.map((chunk) => {
 							if (!chunk.match) return chunk.text
 							return (
@@ -68,6 +70,7 @@ const ResumeHeader: React.FC = () => {
 					</HStack>
 				</VStack>
 			</FeatureCard>
+			<Contacts />
 		</Flex>
 	)
 }

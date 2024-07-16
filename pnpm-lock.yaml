@@ -126,6 +126,9 @@ importers:
       react:
         specifier: ^18.2.0
         version: 18.2.0
+      react-icons:
+        specifier: ^5.2.1
+        version: 5.2.1(react@18.2.0)
     devDependencies:
       '@chakra-ui/react':
         specifier: ^2.8.2

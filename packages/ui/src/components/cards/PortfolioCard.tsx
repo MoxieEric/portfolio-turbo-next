@@ -17,23 +17,31 @@ import { Pill } from '../molecules'
 interface PortfolioCardProps {
 	children?: ReactNode
 	content: PortfolioItem
+	layout?: 'default' | 'compact'
 }
 
-const PortfolioCard: React.FC<PortfolioCardProps> = ({ children, content }) => {
+const PortfolioCard: React.FC<PortfolioCardProps> = ({
+	children,
+	content,
+	layout = 'default',
+}) => {
 	return (
 		<Flex
 			_dark={{
 				bg: 'gray.700',
 			}}
 			bg='gray.50'
-			flexDirection={{ base: 'column', md: 'row' }}
+			flexDirection={{
+				base: 'column',
+				md: 'row',
+			}}
 			gap={{ base: 6, md: 4 }}
 			p={{ base: 4, md: 6 }}
 			rounded='xl'
 			w='full'
 		>
 			<Box
-				minW={48}
+				minW={layout === 'compact' ? 20 : 48}
 				overflow='hidden'
 				rounded='xl'
 				w={{ base: 'full', md: 48 }}
@@ -58,8 +66,12 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({ children, content }) => {
 				px={4}
 			>
 				<VStack alignItems='start' gap={2} justifyContent='center'>
-					<Heading size='lg'>{content.title}</Heading>
-					<Text fontSize='lg'>{content.description}</Text>
+					<Heading size={layout === 'compact' ? 'sm' : 'lg'}>
+						{content.title}
+					</Heading>
+					{layout === 'default' ? (
+						<Text fontSize='lg'>{content.description}</Text>
+					) : null}
 				</VStack>
 
 				<HStack flexWrap='wrap' w='full'>

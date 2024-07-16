@@ -1,8 +1,8 @@
 'use client'
 
-import { HStack, Icon, IconButton, Text, VStack } from '@chakra-ui/react'
+import { Button, Flex, Icon, VStack } from '@chakra-ui/react'
 import type { UiLink } from '@repo/types'
-import { FeatureCard, ScreenSection, SimpleCard } from '@repo/ui/components'
+import { FeatureCard, SimpleCard } from '@repo/ui/components'
 import React from 'react'
 import { FaAt, FaDesktop, FaMobile } from 'react-icons/fa6'
 import { SiGithub, SiLinkedin } from 'react-icons/si'
@@ -36,27 +36,30 @@ const Contacts: React.FC = () => {
 		},
 	]
 	return (
-		<FeatureCard sizeKey='sm' title='Contacts' w='full' pt={6}>
-			<VStack alignItems='start' gap={{ base: 2, md: 4 }}>
+		// <SimpleCard pt={6} sizeKey='sm' title='Contacts' w='full'>
+		<Flex h='full' alignItems='center' justifyContent='center' p={4}>
+			<VStack alignItems='end' gap={4}>
 				{links.map((link) => (
-					<HStack key={link.url}>
-						<IconButton
-							_dark={{
-								color: 'gray.50',
-							}}
-							aria-label={link.label}
-							as='a'
-							href={link.url}
-							icon={<Icon as={link.icon} boxSize={5} />}
-							rounded='full'
-							target='_blank'
-							variant='ghost'
-						/>
-						<Text>{link.label}</Text>
-					</HStack>
+					<Button
+						_dark={{
+							color: 'gray.50',
+						}}
+						aria-label={link.label}
+						as='a'
+						// color='black'
+						href={link.url}
+						key={link.url}
+						rightIcon={<Icon as={link.icon} boxSize={4} />}
+						size='sm'
+						target='_blank'
+						variant='link'
+					>
+						{link.label}
+					</Button>
 				))}
 			</VStack>
-		</FeatureCard>
+		</Flex>
+		// </SimpleCard>
 	)
 }
 

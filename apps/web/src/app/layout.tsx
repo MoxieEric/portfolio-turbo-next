@@ -1,4 +1,3 @@
-import { Blob } from '@repo/ui/components'
 import type { Metadata } from 'next'
 import { Aleo } from 'next/font/google'
 import UiProvider from '../components/providers/UiProvider'
@@ -19,10 +18,7 @@ const RootLayout = ({
 	return (
 		<html className={`${font.className} ${font.variable}`} lang='en'>
 			<body>
-				<UiProvider>
-					<Blob />
-					{children}
-				</UiProvider>
+				<UiProvider>{children}</UiProvider>
 			</body>
 		</html>
 	)

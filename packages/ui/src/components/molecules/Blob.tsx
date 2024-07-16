@@ -41,6 +41,7 @@ const Blob: React.FC<BlobProps> = ({ animate = true, ...props }) => {
 					animation={animate ? spinAnimation : ''}
 					bgGradient='linear(to-r, pink.100, transparent)'
 					bottom={{ base: -72, md: -64 }}
+					top={{ base: -72, md: -64 }}
 					left={{ base: -72, md: -48 }}
 					position='absolute'
 					size='xl'
