@@ -26,7 +26,7 @@ const Blob: React.FC<BlobProps> = ({ animate = true, ...props }) => {
 			right={0}
 			top={16}
 			w='full'
-			zIndex={0}
+			zIndex={-1}
 			{...props}
 		>
 			<Box height='100vh' letterSpacing={-64} position='relative'>

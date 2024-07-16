@@ -2,6 +2,7 @@
 
 import { GridItem, SimpleGrid, VStack } from '@chakra-ui/react'
 import { FeatureCard, SimpleCard, Timeline } from '@repo/ui/components'
+import ContactLinks from '../../../components/resume/ContactLinks'
 import Education from '../../../components/sections/Education'
 import HardSkills from '../../../components/sections/HardSkills'
 import ResumeHeader from '../../../components/sections/ResumeHeader'
@@ -29,6 +30,9 @@ const Page: React.FC = () => {
 				<FeatureCard size='sm' title='Education' w='full'>
 					<Education />
 				</FeatureCard>
+			</GridItem>
+			<GridItem as={VStack} colSpan={6} gap={4} w='full'>
+				<ContactLinks />
 			</GridItem>
 		</SimpleGrid>
 	)

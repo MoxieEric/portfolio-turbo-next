@@ -7,7 +7,13 @@ interface PaperProps {
 
 const Paper: React.FC<PaperProps> = ({ children }) => {
 	return (
-		<VStack alignItems='start' gap={4} w='full'>
+		<VStack
+			alignItems='center'
+			gap={4}
+			justifyContent='center'
+			maxWidth='4xl'
+			w='full'
+		>
 			{children}
 		</VStack>
 	)

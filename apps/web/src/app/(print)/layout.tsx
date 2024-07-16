@@ -8,7 +8,7 @@ const Layout = ({ children }: { children: React.ReactNode }): JSX.Element => {
 		<>
 			<Blob animate={false} />
 			<VStack
-				alignItems='start'
+				alignItems='center'
 				as='main'
 				gap={{ base: 4, md: 8 }}
 				justifyContent='start'

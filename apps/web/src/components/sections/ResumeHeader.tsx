@@ -1,8 +1,18 @@
 'use client'
 
-import { Box, Flex, Heading, Image, Mark, useHighlight } from '@chakra-ui/react'
+import {
+	Box,
+	Flex,
+	HStack,
+	Heading,
+	Icon,
+	Image,
+	Mark,
+	useHighlight,
+} from '@chakra-ui/react'
 import { FeatureCard } from '@repo/ui/components'
 import React from 'react'
+import { PiMountains } from 'react-icons/pi'
 import type { KeyWords } from '../../config/resumeHeaderConfig'
 import { resumeHeaderConfig } from '../../config/resumeHeaderConfig'
 
@@ -53,6 +63,14 @@ const ResumeHeader: React.FC = () => {
 						)
 					})}
 				</Heading>
+				<HStack pt={4}>
+					<HStack>
+						<Icon as={PiMountains} />
+						<Heading fontWeight='semibold' size='xs'>
+							{resumeHeaderConfig.location}
+						</Heading>
+					</HStack>
+				</HStack>
 			</FeatureCard>
 		</Flex>
 	)
