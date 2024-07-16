@@ -1,3 +1,4 @@
+import { Analytics } from '@vercel/analytics/react'
 import type { Metadata } from 'next'
 import { Aleo } from 'next/font/google'
 import UiProvider from '../components/providers/UiProvider'
@@ -19,6 +20,7 @@ const RootLayout = ({
 		<html className={`${font.className} ${font.variable}`} lang='en'>
 			<body>
 				<UiProvider>{children}</UiProvider>
+				<Analytics />
 			</body>
 		</html>
 	)
