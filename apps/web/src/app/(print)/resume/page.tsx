@@ -1,6 +1,6 @@
 'use client'
 
-import { GridItem, Heading, SimpleGrid, VStack } from '@chakra-ui/react'
+import { GridItem, SimpleGrid, VStack } from '@chakra-ui/react'
 import { FeatureCard, SimpleCard, Timeline } from '@repo/ui/components'
 import Education from '../../../components/sections/Education'
 import HardSkills from '../../../components/sections/HardSkills'
