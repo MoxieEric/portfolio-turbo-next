@@ -2,6 +2,7 @@
 
 import { GridItem, Heading, SimpleGrid, VStack } from '@chakra-ui/react'
 import { FeatureCard, SimpleCard, Timeline } from '@repo/ui/components'
+import Education from '../../../components/sections/Education'
 import HardSkills from '../../../components/sections/HardSkills'
 import ResumeHeader from '../../../components/sections/ResumeHeader'
 import SoftSkills from '../../../components/sections/SoftSkills'
@@ -26,12 +27,7 @@ const Page: React.FC = () => {
 					<HardSkills />
 				</FeatureCard>
 				<FeatureCard size='sm' title='Education' w='full'>
-					<VStack alignItems='start'>
-						<Heading size='xs'>Google UX Design, Coursera</Heading>
-						<Heading size='xs'>
-							BFA Photography, Pratt Institute
-						</Heading>
-					</VStack>
+					<Education />
 				</FeatureCard>
 			</GridItem>
 		</SimpleGrid>
