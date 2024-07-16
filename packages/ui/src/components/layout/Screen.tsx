@@ -11,6 +11,7 @@ const Screen: React.FC<ScreenProps> = ({ children }) => {
 			gap={{ base: 8, md: 12 }}
 			maxWidth={{ base: '3xl' }}
 			position='relative'
+			w='full'
 			zIndex={1}
 		>
 			{children}

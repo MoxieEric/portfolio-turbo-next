@@ -11,9 +11,9 @@ const Layout = ({ children }: { children: React.ReactNode }): JSX.Element => {
 			<VStack
 				alignItems='center'
 				as='main'
-				gap={{ base: 4, md: 8 }}
+				gap={4}
 				justifyContent='center'
-				pb={4}
+				pb={12}
 				px={{ base: 4, md: 8 }}
 				w='full'
 			>

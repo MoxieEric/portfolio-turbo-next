@@ -32,7 +32,7 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
 		<HStack
 			alignItems='center'
 			justifyContent='center'
-			p={4}
+			py={4}
 			sx={printStyles}
 			w='full'
 			zIndex={9}
