@@ -1,6 +1,7 @@
 'use client'
 
-import { Button, ChakraProps, HStack, Heading } from '@chakra-ui/react'
+import type { ChakraProps } from '@chakra-ui/react'
+import { Button, HStack, Heading } from '@chakra-ui/react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
@@ -57,15 +58,19 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
 						''
 					)}
 				</HStack>
-				<HStack>
+				<HStack gap={2}>
 					{links
 						.filter((link) => !link.disabled)
 						.map((link: NavBarLink) => (
 							<Link href={link.path} key={link.path}>
 								<Button
-									color='teal.600'
+									_hover={{
+										bg: 'blackAlpha.100',
+									}}
+									color='teal.600 !important'
 									isActive={link.path === pathname}
-									variant='link'
+									size={{ base: 'sm', md: 'md' }}
+									variant={{ base: 'link', md: 'ghost' }}
 								>
 									{link.label}
 								</Button>

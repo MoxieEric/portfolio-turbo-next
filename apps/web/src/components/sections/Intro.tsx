@@ -49,9 +49,10 @@ const Intro: React.FC = () => {
 				<Image
 					alt='Headshot of Eric Nowels'
 					height='full'
+					loading='lazy'
 					objectFit='cover'
 					objectPosition={{ base: '0 -3rem', md: '0' }}
-					src='/headshot--sm.png'
+					src='/headshot--sm.jpg'
 					w={{ base: 'full', md: 72 }}
 				/>
 			</Box>

@@ -28,7 +28,7 @@ const ResumeHeader: React.FC = () => {
 					alt='Headshot of Eric Nowels'
 					height='full'
 					objectFit='cover'
-					src='/headshot--sm.png'
+					src='/headshot--md.png'
 					w='full'
 				/>
 			</Box>

@@ -3,10 +3,10 @@
 import { GridItem, SimpleGrid, VStack } from '@chakra-ui/react'
 import { FeatureCard, SimpleCard, Timeline } from '@repo/ui/components'
 import ContactLinks from '../../../components/resume/ContactLinks'
-import Education from '../../../components/sections/Education'
-import HardSkills from '../../../components/sections/HardSkills'
-import ResumeHeader from '../../../components/sections/ResumeHeader'
-import SoftSkills from '../../../components/sections/SoftSkills'
+import Education from '../../../components/resume/Education'
+import HardSkills from '../../../components/resume/HardSkills'
+import ResumeHeader from '../../../components/resume/ResumeHeader'
+import SoftSkills from '../../../components/resume/SoftSkills'
 import { experienceConfig } from '../../../config/experienceConfig'
 
 const Page: React.FC = () => {

@@ -7,7 +7,7 @@ const font = Aleo({ subsets: ['latin'], variable: '--font-aleo' })
 
 export const metadata: Metadata = {
 	title: 'Eric Nowels',
-	description: 'UX Engineer | Product Innovator | Leader | Runner',
+	description: 'Creative Full-Stack Engineer',
 }
 
 const RootLayout = ({

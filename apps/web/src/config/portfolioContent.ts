@@ -45,7 +45,7 @@ const portfolioContent: Record<Projects, PortfolioItem> = {
 		title: 'MarketMyBrewery',
 		description:
 			'Free 360 marketing app to help craft producers promote their brand, locations and products to craft-seeking consumers. ',
-		id: 'pp-app',
+		id: 'mmb',
 		company: 'BrewLogix',
 		featureImage: '/portfolio/mmb-01--md.png',
 		projectLink: 'https://www.marketmybrewery.com',
@@ -84,7 +84,7 @@ const portfolioContent: Record<Projects, PortfolioItem> = {
 		title: 'Santa Fe Brewing Co.',
 		description:
 			"Animated, irreverent and unapoligetic website for New Mexico's O.G. brewery. Plus some operational goodies in the form of a web app ;)",
-		id: 'blx-ui',
+		id: 'sfbc',
 		company: 'BrewLogix',
 		featureImage: '/portfolio/Santa-Fe-Brewing-Square-09-900x900.jpg',
 		role: 'Design, UX, Development',
@@ -94,7 +94,7 @@ const portfolioContent: Record<Projects, PortfolioItem> = {
 		title: 'Noodles & Company',
 		description:
 			'Ordering app and marketing website for national fast casual restaurant with more than 120 locations nationwide. ',
-		id: 'vb-at',
+		id: 'noodles',
 		featureImage: '/portfolio/noodles-01--md.jpg',
 		stack: ['React Native', 'RNW', 'WordPress', 'GraphQL', 'OLO'],
 	},
@@ -102,7 +102,7 @@ const portfolioContent: Record<Projects, PortfolioItem> = {
 		title: 'Sierra Nevada Brewing Co.',
 		description:
 			'Immersive website balancing the showcase of 4+ decades of beer history and culture with the brass tacks: finding fresh beer.',
-		id: 'blx-ui',
+		id: 'snbc',
 		company: 'Sierra Nevada Brewing Company',
 		featureImage: '/portfolio/Sierra-Nevada-Square-05-900x900.jpg',
 		role: 'Design, UX, Development',
@@ -112,7 +112,7 @@ const portfolioContent: Record<Projects, PortfolioItem> = {
 		title: '10 Barrel Brewing',
 		description:
 			"Brewing website that's as wild as the crew behind the beer.",
-		id: 'blx-ui',
+		id: 'tenbarrel',
 		company: '10 Barrel Brewing',
 		featureImage: '/portfolio/10-Barrel-Square-05-900x900.jpg',
 		role: 'Design, UX, Development',
@@ -130,7 +130,7 @@ const portfolioContent: Record<Projects, PortfolioItem> = {
 		title: 'BluePoint Brewery',
 		description:
 			'Brewery website facilitating online beer and merch ordering, event bookings and plenty of easter eggs.',
-		id: 'blx-docs',
+		id: 'bluepoint',
 		featureImage: '/portfolio/blue-point-brewing-01--md.png',
 		stack: ['Vue', 'Strappi', 'Foundation', 'GraphQL', 'Shopify'],
 	},
@@ -138,7 +138,7 @@ const portfolioContent: Record<Projects, PortfolioItem> = {
 		title: 'ProductBoard ClickSink',
 		description:
 			'Connector plugin for syncing  ProductBoard data to ClickUp project management system and visa versa.',
-		id: 'blx-docs',
+		id: 'pb-cs',
 		featureImage: '/portfolio/clickSync-01--md.jpg',
 		stack: ['React', 'TypeScript', 'Express', 'Apollo'],
 	},
@@ -146,7 +146,7 @@ const portfolioContent: Record<Projects, PortfolioItem> = {
 		title: 'Diestel Turkey',
 		description:
 			'Online shop for Diestel Family Farms, purveyors of all things turkey since 1949.',
-		id: 'blx-docs',
+		id: 'diestel',
 		featureImage: '/portfolio/diestel-01--md.png',
 		stack: ['Vue', 'Shopify Plus', 'Material'],
 	},
