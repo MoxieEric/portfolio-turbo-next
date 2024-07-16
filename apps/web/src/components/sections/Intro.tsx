@@ -2,6 +2,7 @@
 
 import {
 	Box,
+	Button,
 	Flex,
 	HStack,
 	Icon,
@@ -12,6 +13,7 @@ import {
 import type { UiLink } from '@repo/types'
 import { FeatureCard } from '@repo/ui/components'
 import React from 'react'
+import { HiDocumentDownload } from 'react-icons/hi'
 import { SiFlickr, SiGithub, SiLinkedin, SiYoutube } from 'react-icons/si'
 
 const Intro: React.FC = () => {
@@ -72,22 +74,40 @@ const Intro: React.FC = () => {
 					I{`'`}m Eric, a creative full-stack engineer with a passion
 					for building products that make a difference.
 				</Text>
-				<HStack gap={{ base: 2, md: 4 }} pt={4}>
-					{links.map((link) => (
-						<IconButton
-							_dark={{
-								color: 'gray.50',
-							}}
-							aria-label={link.label}
-							as='a'
-							href={link.url}
-							icon={<Icon as={link.icon} boxSize={5} />}
-							key={link.url}
-							rounded='full'
-							target='_blank'
-							variant='ghost'
-						/>
-					))}
+				<HStack gap={{ base: 2, md: 4 }} pt={4} flexWrap='wrap'>
+					<Button
+						_hover={{
+							bg: 'blackAlpha.100',
+						}}
+						as='a'
+						href='/EricNowels-Resume-2024.pdf'
+						leftIcon={<Icon as={HiDocumentDownload} boxSize={4} />}
+						size='sm'
+						target='_blank'
+						variant='ghost'
+					>
+						Download CV
+					</Button>
+					<HStack gap={{ base: 2, md: 4 }}>
+						{links.map((link) => (
+							<IconButton
+								_dark={{
+									color: 'gray.50',
+								}}
+								_hover={{
+									bg: 'blackAlpha.100',
+								}}
+								aria-label={link.label}
+								as='a'
+								href={link.url}
+								icon={<Icon as={link.icon} boxSize={5} />}
+								key={link.url}
+								rounded='full'
+								target='_blank'
+								variant='ghost'
+							/>
+						))}
+					</HStack>
 				</HStack>
 			</FeatureCard>
 		</Flex>
