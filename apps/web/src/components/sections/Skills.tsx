@@ -15,11 +15,7 @@ const Skills: React.FC = () => {
 	return (
 		<ScreenSection id='skills' title='What I Do'>
 			<VStack gap={4} w='full'>
-				<FeatureCard
-					sizeKey='sm'
-					title='Full-Stack Engineering'
-					w='full'
-				>
+				<FeatureCard size='md' title='Full-Stack Engineering' w='full'>
 					{Object.values(EngineeringSkillSection).map(
 						(skillSection) => {
 							return (
@@ -37,10 +33,10 @@ const Skills: React.FC = () => {
 						}
 					)}
 				</FeatureCard>
-				<FeatureCard sizeKey='sm' title='UX & Product Design' w='full'>
+				<FeatureCard size='md' title='UX & Product Design' w='full'>
 					<SkillGroup skillGroup={uxSkillsConfig} />
 				</FeatureCard>
-				<FeatureCard sizeKey='sm' title='Management' w='full'>
+				<FeatureCard size='md' title='Management' w='full'>
 					<SkillGroup skillGroup={mgmtSkillsConfig} />
 				</FeatureCard>
 			</VStack>

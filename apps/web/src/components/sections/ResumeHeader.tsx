@@ -40,13 +40,18 @@ const ResumeHeader: React.FC = () => {
 				flexDirection='column'
 				justifyContent='space-between'
 				rounded='xl'
-				size='lg'
-				sizeKey='sm'
+				size='xl'
 				w='full'
+				// title='Eric Nowels'
 			>
-				<Heading size='lg'>{resumeHeaderConfig.title}</Heading>
+				<Heading size='xl'>{resumeHeaderConfig.title}</Heading>
 				<VStack alignItems='start' gap={6}>
-					<Heading color='gray.600' lineHeight='tall' size='sm'>
+					<Heading
+						color='gray.600'
+						lineHeight='tall'
+						size='sm'
+						maxW='prose'
+					>
 						{chunks.map((chunk) => {
 							if (!chunk.match) return chunk.text
 							return (
@@ -62,12 +67,12 @@ const ResumeHeader: React.FC = () => {
 						})}
 					</Heading>
 
-					<HStack>
+					{/* <HStack>
 						<Icon as={PiMountains} />
 						<Heading fontWeight='semibold' size='xs'>
 							{resumeHeaderConfig.location}
 						</Heading>
-					</HStack>
+					</HStack> */}
 				</VStack>
 			</FeatureCard>
 			<Contacts />

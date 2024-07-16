@@ -2,7 +2,6 @@
 
 import { Button, Flex, Icon, VStack } from '@chakra-ui/react'
 import type { UiLink } from '@repo/types'
-import { FeatureCard, SimpleCard } from '@repo/ui/components'
 import React from 'react'
 import { FaAt, FaDesktop, FaMobile } from 'react-icons/fa6'
 import { SiGithub, SiLinkedin } from 'react-icons/si'
@@ -25,12 +24,12 @@ const Contacts: React.FC = () => {
 			icon: FaMobile,
 		},
 		{
-			label: 'LinkedIn',
+			label: '@ericnowels',
 			url: 'https://www.linkedin.com/in/ericnowels/',
 			icon: SiLinkedin,
 		},
 		{
-			label: 'GitHub',
+			label: '@MoxieEric',
 			url: 'https://www.linkedin.com/in/ericnowels/',
 			icon: SiGithub,
 		},

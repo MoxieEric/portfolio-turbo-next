@@ -19,13 +19,7 @@ const Page: React.FC = () => {
 				</SimpleCard>
 			</GridItem>
 			<GridItem as={VStack} colSpan={3} gap={4} w='full'>
-				<FeatureCard
-					pt={1}
-					size='md'
-					sizeKey='sm'
-					title='What I Do'
-					w='full'
-				>
+				<FeatureCard size='md' title='What I Do' w='full'>
 					<SoftSkills />
 				</FeatureCard>
 				<FeatureCard size='sm' title='Top Skills'>
