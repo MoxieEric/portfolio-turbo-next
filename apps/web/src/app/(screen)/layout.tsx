@@ -14,7 +14,6 @@ const Layout = ({ children }: { children: React.ReactNode }): JSX.Element => {
 				gap={{ base: 4, md: 8 }}
 				justifyContent='center'
 				pb={4}
-				pt={24}
 				px={{ base: 4, md: 8 }}
 				w='full'
 			>

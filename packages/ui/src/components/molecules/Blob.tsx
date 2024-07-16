@@ -21,11 +21,12 @@ const Blob: React.FC<BlobProps> = ({ animate = true, ...props }) => {
 			blur='80px'
 			h='full'
 			left={0}
+			pointerEvents='none'
 			position='fixed'
 			right={0}
 			top={16}
 			w='full'
-			zIndex={-1}
+			zIndex={0}
 			{...props}
 		>
 			<Box height='100vh' letterSpacing={-64} position='relative'>
