@@ -1,22 +1,10 @@
 'use client'
 
-import {
-	Box,
-	Flex,
-	HStack,
-	Heading,
-	Icon,
-	Image,
-	Mark,
-	VStack,
-	useHighlight,
-} from '@chakra-ui/react'
+import { Box, Flex, Heading, Image, Mark, useHighlight } from '@chakra-ui/react'
 import { FeatureCard } from '@repo/ui/components'
 import React from 'react'
-import { PiMountains } from 'react-icons/pi'
 import type { KeyWords } from '../../config/resumeHeaderConfig'
 import { resumeHeaderConfig } from '../../config/resumeHeaderConfig'
-import Contacts from './Contacts'
 
 const ResumeHeader: React.FC = () => {
 	const chunks = useHighlight({
@@ -39,43 +27,33 @@ const ResumeHeader: React.FC = () => {
 				display='flex'
 				flexDirection='column'
 				justifyContent='space-between'
+				p={4}
 				rounded='xl'
 				size='xl'
 				w='full'
-				// title='Eric Nowels'
 			>
 				<Heading size='xl'>{resumeHeaderConfig.title}</Heading>
-				<VStack alignItems='start' gap={6}>
-					<Heading
-						color='gray.600'
-						lineHeight='tall'
-						size='sm'
-						maxW='prose'
-					>
-						{chunks.map((chunk) => {
-							if (!chunk.match) return chunk.text
-							return (
-								<Mark
-									key={chunk.text}
-									{...resumeHeaderConfig.highlightStyles[
-										chunk.text as KeyWords
-									]}
-								>
-									{chunk.text}
-								</Mark>
-							)
-						})}
-					</Heading>
-
-					{/* <HStack>
-						<Icon as={PiMountains} />
-						<Heading fontWeight='semibold' size='xs'>
-							{resumeHeaderConfig.location}
-						</Heading>
-					</HStack> */}
-				</VStack>
+				<Heading
+					color='gray.600'
+					lineHeight='tall'
+					maxW='prose'
+					size='md'
+				>
+					{chunks.map((chunk) => {
+						if (!chunk.match) return chunk.text
+						return (
+							<Mark
+								key={chunk.text}
+								{...resumeHeaderConfig.highlightStyles[
+									chunk.text as KeyWords
+								]}
+							>
+								{chunk.text}
+							</Mark>
+						)
+					})}
+				</Heading>
 			</FeatureCard>
-			<Contacts />
 		</Flex>
 	)
 }

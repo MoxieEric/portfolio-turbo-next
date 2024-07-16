@@ -17,11 +17,17 @@ const HardSkills: React.FC = () => {
 		skills.Next,
 		skills.Vue,
 		skills.Jest,
+		skills.Figma,
+		skills.XD,
+		skills.Axure,
 		skills.Storybook,
+		skills.ChakraUI,
+		skills.TailwindCSS,
+		skills.GluestackUI,
 		skills.Python,
+		skills.PostGres,
 		skills.Hasura,
 		skills.CICD,
-		skills.InformationArchitecture,
 	]
 	return (
 		<VStack gap={4} w='full'>
