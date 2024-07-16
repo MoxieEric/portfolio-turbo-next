@@ -8,6 +8,7 @@ import {
 	Stack,
 	VStack,
 	useDisclosure,
+	useMediaQuery,
 } from '@chakra-ui/react'
 import { Pill } from '@repo/ui/components'
 import React from 'react'
@@ -20,9 +21,14 @@ interface SkillGroupProps {
 
 const SkillGroup: React.FC<SkillGroupProps> = ({ skillGroup }) => {
 	const { isOpen, onToggle } = useDisclosure()
+	const [isPrint] = useMediaQuery('print')
 	return (
 		<VStack gap={2}>
-			<Collapse animateOpacity in={isOpen} startingHeight={90}>
+			<Collapse
+				animateOpacity
+				in={isPrint ? true : isOpen}
+				startingHeight={90}
+			>
 				<Stack flexDirection='row' flexWrap='wrap' gap={2} pt={2}>
 					{skillGroup.map((skill) => (
 						<Pill
@@ -36,20 +42,26 @@ const SkillGroup: React.FC<SkillGroupProps> = ({ skillGroup }) => {
 					))}
 				</Stack>
 			</Collapse>
-			<HStack alignItems='center' justifyContent='flex-start' w='full'>
-				<Button
-					color='teal.600'
-					onClick={onToggle}
-					px={1}
-					rightIcon={
-						<Icon as={isOpen ? GoChevronUp : GoChevronDown} />
-					}
-					size='sm'
-					variant='link'
+			{isPrint ? null : (
+				<HStack
+					alignItems='center'
+					justifyContent='flex-start'
+					w='full'
 				>
-					View {isOpen ? 'less' : 'more'}
-				</Button>
-			</HStack>
+					<Button
+						color='teal.600'
+						onClick={onToggle}
+						px={1}
+						rightIcon={
+							<Icon as={isOpen ? GoChevronUp : GoChevronDown} />
+						}
+						size='sm'
+						variant='link'
+					>
+						View {isOpen ? 'less' : 'more'}
+					</Button>
+				</HStack>
+			)}
 		</VStack>
 	)
 }

@@ -1,4 +1,4 @@
-import { Stat, StatHelpText, StatNumber } from '@chakra-ui/react'
+import { Stat, StatLabel, StatNumber } from '@chakra-ui/react'
 
 interface StatCardProps {
 	stat: string
@@ -8,8 +8,8 @@ interface StatCardProps {
 const StatCard: React.FC<StatCardProps> = ({ stat, label }) => {
 	return (
 		<Stat>
+			<StatLabel>{label}</StatLabel>
 			<StatNumber fontSize={{ base: 'xl', md: '3xl' }}>{stat}</StatNumber>
-			<StatHelpText>{label}</StatHelpText>
 		</Stat>
 	)
 }

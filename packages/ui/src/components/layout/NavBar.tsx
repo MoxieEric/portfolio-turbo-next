@@ -1,5 +1,6 @@
 'use client'
 
+import type { ChakraProps } from '@chakra-ui/react'
 import { Button, HStack, Heading } from '@chakra-ui/react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
@@ -18,7 +19,11 @@ interface NavBarProps {
 const NavBar: React.FC<NavBarProps> = ({ links }) => {
 	const pathname = usePathname()
 	const [title, setTitle] = useState<string>()
-
+	const printStyles: ChakraProps['sx'] = {
+		'@media print': {
+			display: 'none',
+		},
+	}
 	useEffect(() => {
 		setTitle(links.find((link) => link.path === pathname)?.label)
 	}, [pathname, links])
@@ -26,13 +31,9 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
 	return (
 		<HStack
 			alignItems='center'
-			bg='white'
 			justifyContent='center'
-			left={0}
 			p={4}
-			position='fixed'
-			right={0}
-			top={0}
+			sx={printStyles}
 			w='full'
 			zIndex={9}
 		>
@@ -57,15 +58,19 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
 						''
 					)}
 				</HStack>
-				<HStack>
+				<HStack gap={2}>
 					{links
 						.filter((link) => !link.disabled)
 						.map((link: NavBarLink) => (
 							<Link href={link.path} key={link.path}>
 								<Button
-									color='teal.600'
+									_hover={{
+										bg: 'blackAlpha.100',
+									}}
+									color='teal.600 !important'
 									isActive={link.path === pathname}
-									variant='link'
+									size={{ base: 'sm', md: 'md' }}
+									variant={{ base: 'link', md: 'ghost' }}
 								>
 									{link.label}
 								</Button>

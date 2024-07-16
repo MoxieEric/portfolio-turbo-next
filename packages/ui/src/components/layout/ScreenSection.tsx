@@ -1,6 +1,6 @@
 'use client'
 
-import { Flex, Heading } from '@chakra-ui/react'
+import { Flex, Heading, useMediaQuery } from '@chakra-ui/react'
 import { LayoutDirection } from '@repo/types'
 import React, { type ReactNode } from 'react'
 
@@ -17,12 +17,13 @@ const ScreenSection: React.FC<ScreenSectionProps> = ({
 	layout = LayoutDirection.Row,
 	title,
 }) => {
+	const [isPrint] = useMediaQuery('print')
 	return (
 		<Flex
-			flexDirection={{ base: 'column', md: layout }}
+			flexDirection={{ base: 'column', md: isPrint ? 'column' : layout }}
 			gap={4}
 			id={id}
-			justifyContent='space-between'
+			justifyContent={isPrint ? 'flex-start' : 'space-between'}
 			maxW='3xl'
 			w='full'
 		>
