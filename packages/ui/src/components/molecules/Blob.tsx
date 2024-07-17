@@ -7,6 +7,9 @@ interface BlobProps extends BoxProps {
 	animate?: boolean
 }
 
+/**
+ * Displays animated blobs of color in the background with subtle animation.
+ */
 const Blob: React.FC<BlobProps> = ({ animate = true, ...props }) => {
 	const spin = keyframes`  
 	from {transform: rotate(0deg);}   
@@ -42,10 +45,10 @@ const Blob: React.FC<BlobProps> = ({ animate = true, ...props }) => {
 					animation={animate ? spinAnimation : ''}
 					bgGradient='linear(to-r, pink.100, transparent)'
 					bottom={{ base: -72, md: -64 }}
-					top={{ base: -72, md: -64 }}
 					left={{ base: -72, md: -48 }}
 					position='absolute'
 					size='xl'
+					top={{ base: -72, md: -64 }}
 				/>
 			</Box>
 		</Box>
