@@ -2,7 +2,6 @@
 
 import { Flex, Heading, useMediaQuery } from '@chakra-ui/react'
 import { LayoutDirection } from '@repo/types'
-// import  from '@repo/types'
 import React, { type ReactNode } from 'react'
 
 interface ScreenSectionProps {

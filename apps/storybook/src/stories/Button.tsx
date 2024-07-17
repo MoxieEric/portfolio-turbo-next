@@ -1,14 +1,8 @@
 'use client'
 
-import {
-	Box,
-	Card,
-	CardBody,
-	CardHeader,
-	Heading,
-	Text,
-} from '@chakra-ui/react'
-import { Blob, Timeline } from '@repo/ui/components'
+import { Card, CardBody, CardHeader, Heading, Text } from '@chakra-ui/react'
+import { EmploymentType } from '@repo/types'
+import { Timeline } from '@repo/ui/components'
 import React from 'react'
 import './button.css'
 
@@ -38,24 +32,20 @@ export interface ButtonProps {
 /**
  * Primary UI component for user interaction
  */
-export const Button = ({
+export const Button: React.FC<ButtonProps> = ({
 	primary = false,
 	size = 'medium',
 	backgroundColor,
 	label,
-	...props
-}: ButtonProps) => {
-	const mode = primary
-		? 'storybook-button--primary'
-		: 'storybook-button--secondary'
+}) => {
 	return (
 		<Card
-			size={size}
 			bg={backgroundColor}
+			size={size}
 			variant={primary ? 'elevated' : 'solid'}
 		>
 			<CardHeader>
-				<Heading>Heading</Heading>
+				<Heading>{label}</Heading>
 			</CardHeader>
 			<CardBody>
 				<Text>Howdy there...</Text>
@@ -66,7 +56,7 @@ export const Button = ({
 							isRemote: true,
 							companyName: 'asd',
 							location: 'asddd, bg',
-							type: null,
+							type: EmploymentType.FullTime,
 							logo: '#',
 							dateRange: '1 - 2',
 						},
@@ -74,21 +64,5 @@ export const Button = ({
 				/>
 			</CardBody>
 		</Card>
-		// <button
-		// 	type='button'
-		// 	className={[
-		// 		'storybook-button',
-		// 		`storybook-button--${size}`,
-		// 		mode,
-		// 	].join(' ')}
-		// 	{...props}
-		// >
-		// 	{label}
-		// 	<style jsx>{`
-		// 		button {
-		// 			background-color: ${backgroundColor};
-		// 		}
-		// 	`}</style>
-		// </button>
 	)
 }
