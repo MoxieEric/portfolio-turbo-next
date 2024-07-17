@@ -15,10 +15,10 @@ const baseStyle: PartsStyleObject = configHelpers.definePartsStyle({
 		_dark: { borderColor: 'gray.500' },
 	},
 	header: {
-		color: 'gray.500',
-		fontWeight: 'extrabold',
+		color: 'black',
+		fontFamily: 'Aleo',
+		fontWeight: 'bold',
 		fontSize: '2xl',
-		pb: '16px',
 		_dark: { color: 'white' },
 		_empty: {
 			display: 'none',

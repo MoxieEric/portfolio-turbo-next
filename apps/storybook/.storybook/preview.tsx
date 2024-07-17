@@ -1,4 +1,4 @@
-import { ChakraProvider } from '@chakra-ui/react'
+import { ChakraProvider, getCSSVar, getToken, useTheme } from '@chakra-ui/react'
 import { theme } from '@repo/ui/theme'
 
 import type { Preview } from '@storybook/react'
@@ -18,6 +18,27 @@ const preview: Preview = {
 				color: /(background|color)$/i,
 				date: /Date$/i,
 			},
+		},
+		backgrounds: {
+			default: 'dark',
+			values: [
+				{
+					name: 'dark',
+					value: 'var(--chakra-colors-gray-800)',
+				},
+				{
+					name: 'medium',
+					value: 'var(--chakra-colors-gray-100)',
+				},
+				{
+					name: 'light',
+					value: 'var(--chakra-colors-gray-50)',
+				},
+				{
+					name: 'white',
+					value: 'white',
+				},
+			],
 		},
 	},
 }
