@@ -1,10 +1,10 @@
 import { cardAnatomy } from '@chakra-ui/anatomy'
 import type {
 	ComponentMultiStyleConfig,
+	PartsStyleInterpolation,
 	PartsStyleObject,
 } from '@chakra-ui/react'
 import { createMultiStyleConfigHelpers } from '@chakra-ui/react'
-import { printStyles } from '../../utils'
 
 const configHelpers = createMultiStyleConfigHelpers(cardAnatomy.keys)
 
@@ -30,18 +30,10 @@ const baseStyle: PartsStyleObject = configHelpers.definePartsStyle({
 		_dark: { color: 'gray.800' },
 	},
 })
-const variants: Record<string, PartsStyleObject> = {
+const variants: Record<string, PartsStyleInterpolation> = {
 	feature: {
-		_dark: {
-			bg: 'gray.700',
-		},
-		bg: 'gray.50',
-		overflow: 'hidden',
-		rounded: 'lg',
-		sx: {
-			...printStyles({
-				boxShadow: 'none',
-			}),
+		container: {
+			bg: 'gray.100',
 		},
 	},
 }
