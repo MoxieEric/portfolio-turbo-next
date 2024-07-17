@@ -4,6 +4,7 @@ import type {
 	PartsStyleObject,
 } from '@chakra-ui/react'
 import { createMultiStyleConfigHelpers } from '@chakra-ui/react'
+import { printStyles } from '../../utils'
 
 const configHelpers = createMultiStyleConfigHelpers(cardAnatomy.keys)
 
@@ -11,8 +12,7 @@ const baseStyle: PartsStyleObject = configHelpers.definePartsStyle({
 	container: {
 		boxShadow: 'none',
 		bg: 'transparent',
-		borderColor: 'gray.100',
-		_dark: { borderColor: 'gray.500' },
+		border: 'none',
 	},
 	header: {
 		color: 'black',
@@ -30,6 +30,21 @@ const baseStyle: PartsStyleObject = configHelpers.definePartsStyle({
 		_dark: { color: 'gray.800' },
 	},
 })
+const variants: Record<string, PartsStyleObject> = {
+	feature: {
+		_dark: {
+			bg: 'gray.700',
+		},
+		bg: 'gray.50',
+		overflow: 'hidden',
+		rounded: 'lg',
+		sx: {
+			...printStyles({
+				boxShadow: 'none',
+			}),
+		},
+	},
+}
 
 const sizes = {
 	sm: {
@@ -42,6 +57,6 @@ const sizes = {
 }
 
 const cardConfig: ComponentMultiStyleConfig =
-	configHelpers.defineMultiStyleConfig({ baseStyle, sizes })
+	configHelpers.defineMultiStyleConfig({ baseStyle, sizes, variants })
 
 export default cardConfig

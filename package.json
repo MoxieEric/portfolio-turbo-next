@@ -3,7 +3,7 @@
 	"scripts": {
 		"build": "turbo build",
 		"build:types": "turbo build --filter @repo/types",
-		"dev": "turbo dev --filter web @repo/ui",
+		"dev": "turbo dev --filter web",
 		"dev:storybook": "turbo dev --filter storybook",
 		"lint": "turbo lint",
 		"type-check": "turbo type-check",

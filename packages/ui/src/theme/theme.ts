@@ -1,11 +1,17 @@
 import type { ThemeConfig } from '@chakra-ui/react'
 import { extendTheme } from '@chakra-ui/react'
+import { Aleo, Inter } from 'next/font/google'
 import componentConfig from './components/componentConfig'
+
+const aleo = Aleo({ subsets: ['latin'] })
+const inter = Inter({ subsets: ['latin'] })
 
 const theme: ThemeConfig = extendTheme({
 	fonts: {
-		heading: 'Aleo, sans-serif',
-		body: 'Lato, sans-serif',
+		serif: `${aleo.style.fontFamily}, serif`,
+		sans: `${inter.style.fontFamily}, sans-serif`,
+		heading: `${inter.style.fontFamily}, sans-serif`,
+		body: `${inter.style.fontFamily}, sans-serif`,
 	},
 	components: componentConfig,
 	colors: {
