@@ -1,10 +1,11 @@
 import type { As } from '@chakra-ui/react'
-import { Code, Flex, HStack, Icon, SimpleGrid, VStack } from '@chakra-ui/react'
+import { HStack, Icon, SimpleGrid } from '@chakra-ui/react'
 import type { Meta, StoryObj } from '@storybook/react'
 import * as Fa from 'react-icons/fa6'
 import * as Hi from 'react-icons/hi2'
 import * as Si from 'react-icons/si'
 import { IconOption, SizeToken } from '../../types'
+import { ExampleIcon } from '../_helpers'
 
 const meta: Meta<typeof Icon> = {
 	title: 'Atoms/Icon',
@@ -78,22 +79,7 @@ export const AllIcons: Story = {
 						break
 				}
 				return (
-					<Flex
-						alignItems='center'
-						flexDirection='column'
-						gap={4}
-						key={iconSlug}
-					>
-						<VStack
-							aspectRatio='1/1'
-							bg='whiteAlpha.200'
-							shadow='md'
-							w='fit-content'
-						>
-							<Icon as={icon} boxSize={4} />
-						</VStack>
-						<Code fontSize='sm'>{iconSlug}</Code>
-					</Flex>
+					<ExampleIcon icon={icon} key={iconSlug} name={iconSlug} />
 				)
 			})}
 		</SimpleGrid>
