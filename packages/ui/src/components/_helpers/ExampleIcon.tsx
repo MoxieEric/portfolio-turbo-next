@@ -5,8 +5,8 @@ import { Code, Flex, Icon, VStack } from '@chakra-ui/react'
 import React from 'react'
 
 interface ExampleIconProps {
-	icon: As
 	name: string
+	icon?: As
 }
 
 export const ExampleIcon: React.FC<ExampleIconProps> = ({ icon, name }) => {

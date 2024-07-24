@@ -12,7 +12,6 @@ interface PillProps extends BadgeProps {
 const Pill: React.FC<PillProps> = ({ text, icon, children, ...props }) => {
 	return (
 		<Badge
-			boxShadow='none'
 			px={4}
 			py={2}
 			rounded='full'

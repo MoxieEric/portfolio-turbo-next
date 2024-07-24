@@ -1,4 +1,4 @@
-import { Box, HStack, Heading, Text, VStack, theme } from '@chakra-ui/react'
+import { Box, HStack, Heading, VStack } from '@chakra-ui/react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { ColorValue, SizeToken } from '../../types'
 import { ColorSwatch } from '../_helpers'

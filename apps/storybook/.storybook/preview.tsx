@@ -1,4 +1,10 @@
-import { ChakraProvider, getCSSVar, getToken, useTheme } from '@chakra-ui/react'
+import {
+	Box,
+	ChakraProvider,
+	getCSSVar,
+	getToken,
+	useTheme,
+} from '@chakra-ui/react'
 import { theme } from '@repo/ui/theme'
 
 import type { Preview } from '@storybook/react'
@@ -8,7 +14,9 @@ const preview: Preview = {
 	decorators: [
 		(Story) => (
 			<ChakraProvider theme={theme}>
-				<Story />
+				<Box p={4}>
+					<Story />
+				</Box>
 			</ChakraProvider>
 		),
 	],

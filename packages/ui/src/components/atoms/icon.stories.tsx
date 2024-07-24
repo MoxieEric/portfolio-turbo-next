@@ -1,10 +1,8 @@
-import type { As } from '@chakra-ui/react'
 import { HStack, Icon, SimpleGrid } from '@chakra-ui/react'
 import type { Meta, StoryObj } from '@storybook/react'
-import * as Fa from 'react-icons/fa6'
 import * as Hi from 'react-icons/hi2'
-import * as Si from 'react-icons/si'
 import { IconOption, SizeToken } from '../../types'
+import { getIcon } from '../../utils'
 import { ExampleIcon } from '../_helpers'
 
 const meta: Meta<typeof Icon> = {
@@ -58,26 +56,7 @@ export const AllIcons: Story = {
 	decorators: () => (
 		<SimpleGrid columns={{ base: 2, md: 4, xl: 6 }} gap={8} rowGap={8}>
 			{Object.values(IconOption).map((iconSlug) => {
-				const library: string = iconSlug.substring(0, 2)
-				let icon: As
-				switch (library) {
-					case 'Hi':
-						// @ts-expect-error -- must coerce :(
-						icon = Hi[iconSlug] as As
-						break
-					case 'Fa':
-						// @ts-expect-error -- must coerce :(
-						icon = Fa[iconSlug] as As
-						break
-					case 'Si':
-						// @ts-expect-error -- must coerce :(
-						icon = Si[iconSlug] as As
-						break
-
-					default:
-						icon = Hi.HiFaceFrown
-						break
-				}
+				const icon = getIcon(iconSlug)
 				return (
 					<ExampleIcon icon={icon} key={iconSlug} name={iconSlug} />
 				)
