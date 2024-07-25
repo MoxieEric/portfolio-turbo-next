@@ -3,11 +3,12 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { ColorValue, SizeToken } from '../../types'
 import { ColorSwatch } from '../_helpers'
 
-enum ColorSilo {
+export enum ColorSilo {
 	Gray = 'gray',
 	Teal = 'teal',
 	Pink = 'pink',
 	BlackAlpha = 'blackAlpha',
+	Mono = 'mono',
 }
 enum FlatColors {
 	Black = 'black',

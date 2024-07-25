@@ -1,4 +1,4 @@
-import { Heading, VStack } from '@chakra-ui/react'
+import { Heading, VStack, theme } from '@chakra-ui/react'
 import type { Meta, StoryObj } from '@storybook/react'
 import { SizeToken } from '../../types'
 
@@ -9,7 +9,16 @@ const meta: Meta<typeof Heading> = {
 		layout: 'left',
 	},
 	tags: ['autodocs'],
-	argTypes: {},
+	argTypes: {
+		size: {
+			options: Object.keys(theme.fontSizes),
+			control: { type: 'select' },
+		},
+		variant: {
+			options: ['default', 'serif'],
+			control: { type: 'radio' },
+		},
+	},
 }
 
 export default meta

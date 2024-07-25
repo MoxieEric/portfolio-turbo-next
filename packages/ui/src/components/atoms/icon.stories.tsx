@@ -1,7 +1,7 @@
-import { HStack, Icon, SimpleGrid } from '@chakra-ui/react'
+import { Icon, SimpleGrid, theme } from '@chakra-ui/react'
 import type { Meta, StoryObj } from '@storybook/react'
 import * as Hi from 'react-icons/hi2'
-import { IconOption, SizeToken } from '../../types'
+import { IconOption } from '../../types'
 import { getIcon } from '../../utils'
 import { ExampleIcon } from '../_helpers'
 
@@ -13,9 +13,13 @@ const meta: Meta<typeof Icon> = {
 		background: 'light',
 	},
 	argTypes: {
-		size: {
-			options: Object.values(SizeToken),
+		boxSize: {
+			options: Object.keys(theme.sizes),
 			control: { type: 'select' },
+		},
+		as: {
+			control: 'select',
+			options: ['None', ...Object.values(IconOption)],
 		},
 	},
 }
@@ -27,29 +31,13 @@ type Story = StoryObj<typeof meta>
 /* Stories */
 export const Default: Story = {
 	args: {
-		children: 'This is a heading',
 		as: Hi.HiSparkles,
+		boxSize: 5,
 	},
-}
-export const Sizes: Story = {
-	args: {},
-	decorators: () => (
-		<HStack
-			alignItems='baseline'
-			flexDirection='row-reverse'
-			gap={4}
-			justifyContent='start'
-		>
-			{Object.values(SizeToken).map((size, index) => (
-				<Icon
-					as={Hi.HiSparkles}
-					boxSize={Math.floor((index + 1) * 2)}
-					key={size}
-					size={size}
-				/>
-			))}
-		</HStack>
-	),
+	decorators: (Story, { args, initialArgs }) => {
+		const icon = args.as ? getIcon(args.as as IconOption) : undefined
+		return <Icon as={icon || initialArgs.as} boxSize={args.boxSize} />
+	},
 }
 export const AllIcons: Story = {
 	args: {},
