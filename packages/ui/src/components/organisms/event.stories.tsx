@@ -1,4 +1,3 @@
-import { EmploymentType } from '@repo/types'
 import type { Meta, StoryObj } from '@storybook/react'
 import { exampleEvent } from '../../content/event'
 import { Event } from './Event'
@@ -11,8 +10,10 @@ const meta: Meta<typeof Event> = {
 	},
 	tags: ['autodocs'],
 	argTypes: {
-		title: {
-			control: 'text',
+		event: {
+			title: {
+				control: 'text',
+			},
 		},
 	},
 }
@@ -28,16 +29,9 @@ export const Default: Story = {
 	},
 }
 
-export const Variation: Story = {
+export const WithoutLine: Story = {
 	args: {
-		event: {
-			title: 'A Thing That Happened',
-			companyName: 'Acme Co.',
-			location: 'Springfield, Il',
-			isRemote: true,
-			dateRange: '0000 - 0000',
-			type: EmploymentType.FullTime,
-		},
+		event: exampleEvent,
 		line: false,
 	},
 }

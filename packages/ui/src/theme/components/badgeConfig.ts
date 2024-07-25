@@ -3,7 +3,6 @@ import { defineStyleConfig } from '@chakra-ui/react'
 
 const badgeConfig: ComponentSingleStyleConfig = defineStyleConfig({
 	baseStyle: {
-		bg: 'gray.200',
 		px: 2,
 	},
 	variants: {
@@ -13,9 +12,7 @@ const badgeConfig: ComponentSingleStyleConfig = defineStyleConfig({
 			shadow: 'sm',
 			textTransform: 'none',
 		},
-		solid: {
-			color: 'black',
-		},
+		solid: {},
 		subtle: {
 			color: 'blackAlpha.500',
 		},

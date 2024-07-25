@@ -12,6 +12,8 @@ interface PillProps extends BadgeProps {
 const Pill: React.FC<PillProps> = ({ text, icon, children, ...props }) => {
 	return (
 		<Badge
+			bg='gray.200'
+			color='black'
 			px={4}
 			py={2}
 			rounded='full'
@@ -19,6 +21,7 @@ const Pill: React.FC<PillProps> = ({ text, icon, children, ...props }) => {
 			size='lg'
 			sx={printStyles({ boxShadow: 'none' })}
 			textTransform='none'
+			variant='solid'
 			{...props}
 		>
 			<Flex alignItems='center' gap={2}>

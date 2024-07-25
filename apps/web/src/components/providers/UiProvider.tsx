@@ -10,7 +10,7 @@ interface UiProviderProps {
 
 const UiProvider: React.FC<UiProviderProps> = ({ children }) => {
 	return (
-		<ChakraProvider theme={theme} colorModeManager={localStorageManager}>
+		<ChakraProvider colorModeManager={localStorageManager} theme={theme}>
 			{children}
 		</ChakraProvider>
 	)

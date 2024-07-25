@@ -16,13 +16,13 @@ const theme: ThemeConfig = extendTheme({
 	components: componentConfig,
 	colors: {
 		mono: {
-			'50': '#000',
+			'50': '#FFF',
 			'100': '#000',
 			'200': '#000',
 			'300': '#000',
 			'400': '#000',
 			'500': '#000',
-			'600': '#FFF',
+			'600': '#444',
 			'700': '#FFF',
 			'800': '#FFF',
 			'900': '#FFF',

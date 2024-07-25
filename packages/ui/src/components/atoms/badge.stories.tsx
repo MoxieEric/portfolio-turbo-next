@@ -1,6 +1,6 @@
 import { Badge, HStack } from '@chakra-ui/react'
 import type { Meta, StoryObj } from '@storybook/react'
-import { ButtonSizeToken } from '../../types'
+import { ColorSilo } from './colors.stories'
 
 const meta: Meta<typeof Badge> = {
 	title: 'Atoms/Badge',
@@ -10,9 +10,9 @@ const meta: Meta<typeof Badge> = {
 	},
 	tags: ['autodocs'],
 	argTypes: {
-		size: {
+		colorScheme: {
 			control: 'select',
-			options: Object.values(ButtonSizeToken).map((size) => size),
+			options: Object.values(ColorSilo),
 		},
 	},
 }
@@ -27,13 +27,13 @@ export const Default: Story = {
 		children: 'Badge',
 	},
 }
-export const Sizes: Story = {
+export const ColorScheme: Story = {
 	args: {},
 	decorators: () => (
 		<HStack flexWrap='wrap'>
-			{Object.values(ButtonSizeToken).map((size) => (
-				<Badge key={size} size={size}>
-					Badge {size}
+			{Object.values(ColorSilo).map((color) => (
+				<Badge colorScheme={color} key={color} variant='solid'>
+					Badge {color}
 				</Badge>
 			))}
 		</HStack>

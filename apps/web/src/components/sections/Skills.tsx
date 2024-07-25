@@ -1,7 +1,13 @@
 'use client'
 
 import { VStack } from '@chakra-ui/react'
-import { FeatureCard, ScreenSection, SimpleCard } from '@repo/ui/components'
+import {
+	FeatureCard,
+	Pill,
+	PillGroup,
+	ScreenSection,
+	SimpleCard,
+} from '@repo/ui/components'
 import React from 'react'
 import {
 	EngineeringSkillSection,
@@ -9,7 +15,6 @@ import {
 	mgmtSkillsConfig,
 	uxSkillsConfig,
 } from '../../config/skillsConfig'
-import SkillGroup from '../skills/SkillGroup'
 
 const Skills: React.FC = () => {
 	return (
@@ -23,21 +28,40 @@ const Skills: React.FC = () => {
 									key={skillSection}
 									title={skillSection}
 								>
-									<SkillGroup
-										skillGroup={
-											engineerSkillsConfig[skillSection]
-										}
-									/>
+									<PillGroup>
+										{engineerSkillsConfig[skillSection].map(
+											(skill) => (
+												<Pill
+													icon={skill?.icon}
+													key={skill.label}
+												>
+													{skill.label}
+												</Pill>
+											)
+										)}
+									</PillGroup>
 								</SimpleCard>
 							)
 						}
 					)}
 				</FeatureCard>
 				<FeatureCard size='md' title='UX & Product Design' w='full'>
-					<SkillGroup skillGroup={uxSkillsConfig} />
+					<PillGroup>
+						{uxSkillsConfig.map((skill) => (
+							<Pill icon={skill?.icon} key={skill.label}>
+								{skill.label}
+							</Pill>
+						))}
+					</PillGroup>
 				</FeatureCard>
 				<FeatureCard size='md' title='Management' w='full'>
-					<SkillGroup skillGroup={mgmtSkillsConfig} />
+					<PillGroup>
+						{mgmtSkillsConfig.map((skill) => (
+							<Pill icon={skill?.icon} key={skill.label}>
+								{skill.label}
+							</Pill>
+						))}
+					</PillGroup>
 				</FeatureCard>
 			</VStack>
 		</ScreenSection>

@@ -32,7 +32,6 @@ interface EventProps {
 	event: TimelineEvent
 	children?: ReactNode
 	line?: boolean
-	title?: string /* deprecated */
 }
 
 const Event: React.FC<EventProps> = ({ children, event, line = true }) => {
@@ -76,7 +75,7 @@ const Event: React.FC<EventProps> = ({ children, event, line = true }) => {
 						display='flex'
 						flexDir='column'
 						gap={2}
-						padding={3}
+						padding={{ base: 3, md: 3 }}
 						w='full'
 					>
 						<Heading size='md' w='full'>
