@@ -74,12 +74,13 @@ const Intro: React.FC = () => {
 					I{`'`}m Eric, a creative full-stack engineer with a passion
 					for building products that make a difference.
 				</Text>
-				<HStack gap={{ base: 2, md: 4 }} pt={4} flexWrap='wrap'>
+				<HStack flexWrap='wrap' gap={{ base: 2, md: 4 }} pt={4}>
 					<Button
 						_hover={{
 							bg: 'blackAlpha.100',
 						}}
 						as='a'
+						className='heap-download__resume'
 						href='/EricNowels-Resume-2024.pdf'
 						leftIcon={<Icon as={HiDocumentDownload} boxSize={4} />}
 						size='sm'
