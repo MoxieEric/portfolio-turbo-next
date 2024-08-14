@@ -2,9 +2,9 @@
 	"private": true,
 	"scripts": {
 		"build": "turbo build",
-		"build:types": "turbo build --filter @repo/types",
+		"build:types": "turbo build --filter=@repo/types",
 		"dev": "turbo dev --filter web",
-		"dev:storybook": "turbo dev --filter storybook",
+		"dev:ui": "turbo dev --filter=...storybook --filter=@repo/ui",
 		"lint": "turbo lint",
 		"type-check": "turbo type-check",
 		"clean": "turbo clean",

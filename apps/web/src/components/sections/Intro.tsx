@@ -62,19 +62,19 @@ const Intro: React.FC = () => {
 			<FeatureCard
 				display='flex'
 				flexDirection='column'
-				size='lg'
-				title='Hi There! 👋'
-				w='full'
 				p={{
 					base: 3,
 					md: 5,
 				}}
+				size='lg'
+				title='Hi There! 👋'
+				w='full'
 			>
 				<Text fontSize='xl'>
 					I{`'`}m Eric, a creative full-stack engineer with a passion
 					for building products that make a difference.
 				</Text>
-				<HStack gap={{ base: 2, md: 4 }} pt={4} flexWrap='wrap'>
+				<HStack flexWrap='wrap' gap={{ base: 2, md: 4 }} pt={4}>
 					<Button
 						_hover={{
 							bg: 'blackAlpha.100',
