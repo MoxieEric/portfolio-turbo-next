@@ -10,8 +10,9 @@ const Paper: React.FC<PaperProps> = ({ children }) => {
 		<VStack
 			alignItems='center'
 			gap={4}
-			justifyContent='center'
+			justifyContent='start'
 			maxWidth='4xl'
+			minH='842px'
 			w='full'
 		>
 			{children}
