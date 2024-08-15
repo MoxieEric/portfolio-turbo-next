@@ -8,28 +8,26 @@ import React from 'react'
 export interface NavBarLink {
 	label: string
 	path: string
+	active?: boolean
 	disabled?: boolean
 }
 
-interface NavLinkProps {
-	link: NavBarLink
-}
-
-const NavLink: React.FC<NavLinkProps> = ({ link }) => {
+const NavLink: React.FC<NavBarLink> = ({ label, path, disabled, active }) => {
 	const pathname = usePathname()
 
 	return (
-		<Link href={link.path} key={link.path}>
+		<Link aria-disabled={disabled} href={path} key={path}>
 			<Button
 				_hover={{
 					bg: 'blackAlpha.100',
 				}}
 				color='teal.600 !important'
-				isActive={link.path === pathname}
+				isActive={path === pathname || active}
+				isDisabled={disabled}
 				size={{ base: 'sm', md: 'md' }}
 				variant={{ base: 'link', md: 'ghost' }}
 			>
-				{link.label}
+				{label}
 			</Button>
 		</Link>
 	)

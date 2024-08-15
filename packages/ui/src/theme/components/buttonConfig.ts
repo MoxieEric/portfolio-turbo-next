@@ -2,7 +2,11 @@ import type { ComponentStyleConfig } from '@chakra-ui/react'
 import { theme } from '@chakra-ui/react'
 
 const buttonConfig: ComponentStyleConfig = {
-	baseStyle: {},
+	baseStyle: {
+		_active: {
+			pointerEvents: 'none',
+		},
+	},
 	sizes: {},
 	variants: {
 		round: {
