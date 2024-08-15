@@ -24,11 +24,7 @@ const meta: Meta<typeof PillList> = {
 				{Array.from(
 					Array(args.zIndex || initialArgs.zIndex).keys()
 				).map((index) => (
-					<Pill
-						icon={getIcon(IconOption.FaPeopleArrows)}
-						key={index}
-						// shadow='sm'
-					>
+					<Pill icon={getIcon(IconOption.FaPeopleArrows)} key={index}>
 						{`Pill ${index}`}
 					</Pill>
 				))}
