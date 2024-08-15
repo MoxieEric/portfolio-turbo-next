@@ -1,6 +1,7 @@
 | Item        | Link |
 | ----------- | ---- |
-| **Preivew** | ...  |
+| **Portfolio Preview** | ...  |
+| **UI Preview** | ...  |
 | **Issue**   | ...  |
 
 ## Overview

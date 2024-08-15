@@ -1,5 +1,5 @@
 'use client'
-
+import type { BoxProps } from '@chakra-ui/react'
 import {
 	Button,
 	Collapse,
@@ -10,39 +10,34 @@ import {
 	useDisclosure,
 	useMediaQuery,
 } from '@chakra-ui/react'
-import { Pill } from '@repo/ui/components'
-import React from 'react'
+import React, { useEffect, useState } from 'react'
 import { GoChevronDown, GoChevronUp } from 'react-icons/go'
-import type { SkillConfig } from '../../config/skillsConfig'
 
-interface SkillGroupProps {
-	skillGroup: SkillConfig[]
+interface PillGroupProps extends BoxProps {
+	children: React.ReactNode[]
 }
 
-const SkillGroup: React.FC<SkillGroupProps> = ({ skillGroup }) => {
-	const { isOpen, onToggle } = useDisclosure()
+const PillGroup: React.FC<PillGroupProps> = ({ children }) => {
+	const { isOpen, onOpen, onToggle } = useDisclosure()
 	const [isPrint] = useMediaQuery('print')
+	const [pillCount, setPillCount] = useState<number>(0)
+
+	useEffect(() => {
+		setPillCount(Object.keys(children).length)
+		if (Object.keys(children).length <= 10) onOpen()
+	}, [children])
 	return (
-		<VStack gap={2}>
+		<VStack gap={2} maxW='prose'>
 			<Collapse
 				animateOpacity
 				in={isPrint ? true : isOpen}
-				startingHeight={90}
+				startingHeight={pillCount > 10 ? 90 : 'auto'}
 			>
 				<Stack flexDirection='row' flexWrap='wrap' gap={2} pt={2}>
-					{skillGroup.map((skill) => (
-						<Pill
-							bg='gray.200'
-							icon={skill?.icon}
-							key={skill.label}
-							shadow='sm'
-						>
-							{skill.label}
-						</Pill>
-					))}
+					{children}
 				</Stack>
 			</Collapse>
-			{isPrint ? null : (
+			{isPrint || pillCount <= 10 ? null : (
 				<HStack
 					alignItems='center'
 					justifyContent='flex-start'
@@ -66,4 +61,4 @@ const SkillGroup: React.FC<SkillGroupProps> = ({ skillGroup }) => {
 	)
 }
 
-export default SkillGroup
+export { PillGroup }

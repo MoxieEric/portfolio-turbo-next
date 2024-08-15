@@ -62,13 +62,13 @@ const Intro: React.FC = () => {
 			<FeatureCard
 				display='flex'
 				flexDirection='column'
-				size='lg'
-				title='Hi There! 👋'
-				w='full'
 				p={{
 					base: 3,
 					md: 5,
 				}}
+				size='lg'
+				title='Hi There! 👋'
+				w='full'
 			>
 				<Text fontSize='xl'>
 					I{`'`}m Eric, a creative full-stack engineer with a passion

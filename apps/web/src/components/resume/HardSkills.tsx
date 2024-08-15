@@ -1,9 +1,9 @@
 'use client'
 
 import { VStack } from '@chakra-ui/react'
+import { Pill, PillList } from '@repo/ui/components'
 import React from 'react'
 import { skills } from '../../config/skillsConfig'
-import SkillList from '../skills/SkillList'
 
 const HardSkills: React.FC = () => {
 	const topSKills = [
@@ -31,7 +31,13 @@ const HardSkills: React.FC = () => {
 	]
 	return (
 		<VStack gap={4} w='full'>
-			<SkillList skills={topSKills} />
+			<PillList>
+				{topSKills.map((skill) => (
+					<Pill icon={skill?.icon} key={skill.label}>
+						{skill.label}
+					</Pill>
+				))}
+			</PillList>
 		</VStack>
 	)
 }

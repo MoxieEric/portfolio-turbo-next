@@ -1,22 +1,18 @@
 'use client'
 
 import type { ChakraProps } from '@chakra-ui/react'
-import { Button, HStack, Heading } from '@chakra-ui/react'
+import { HStack, Heading } from '@chakra-ui/react'
 import Link from 'next/link'
 import { usePathname } from 'next/navigation'
 import React, { useEffect, useState } from 'react'
-
-export interface NavBarLink {
-	label: string
-	path: string
-	disabled?: boolean
-}
+import { NavLink, type NavBarLink } from '../molecules/NavLink'
 
 interface NavBarProps {
 	links: NavBarLink[]
+	label: string
 }
 
-const NavBar: React.FC<NavBarProps> = ({ links }) => {
+const NavBar: React.FC<NavBarProps> = ({ links, label }) => {
 	const pathname = usePathname()
 	const [title, setTitle] = useState<string>()
 	const printStyles: ChakraProps['sx'] = {
@@ -45,7 +41,7 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
 			>
 				<HStack>
 					<Link href='/'>
-						<Heading size='md'>Eric Nowels</Heading>
+						<Heading size='md'>{label}</Heading>
 					</Link>
 					{title ? (
 						<>
@@ -62,19 +58,7 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
 					{links
 						.filter((link) => !link.disabled)
 						.map((link: NavBarLink) => (
-							<Link href={link.path} key={link.path}>
-								<Button
-									_hover={{
-										bg: 'blackAlpha.100',
-									}}
-									color='teal.600 !important'
-									isActive={link.path === pathname}
-									size={{ base: 'sm', md: 'md' }}
-									variant={{ base: 'link', md: 'ghost' }}
-								>
-									{link.label}
-								</Button>
-							</Link>
+							<NavLink key={link.label} {...link} />
 						))}
 				</HStack>
 			</HStack>

@@ -1,7 +1,7 @@
 import { EmploymentType } from '@repo/types'
-import type { TimelineItem } from '@repo/ui/components'
+import type { TimelineEvent } from '@repo/ui/components'
 
-const experienceConfig: TimelineItem[] = [
+const experienceConfig: TimelineEvent[] = [
 	{
 		title: 'Director of UX | Senior Engineer',
 		companyName: 'BrewLogix',

@@ -17,7 +17,7 @@ const Layout = ({ children }: { children: React.ReactNode }): JSX.Element => {
 				px={{ base: 4, md: 8 }}
 				w='full'
 			>
-				<NavBar links={navigationConfig} />
+				<NavBar label='Eric Nowels' links={navigationConfig} />
 				<Screen>{children}</Screen>
 			</VStack>
 		</>
