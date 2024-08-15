@@ -3,7 +3,7 @@ import type { Meta, StoryObj } from '@storybook/react'
 import { NavLink } from './NavLink'
 
 const meta: Meta<typeof NavLink> = {
-	title: 'Atoms/NavLink',
+	title: 'Molecules/NavLink',
 	component: NavLink,
 	parameters: {
 		layout: 'left',
