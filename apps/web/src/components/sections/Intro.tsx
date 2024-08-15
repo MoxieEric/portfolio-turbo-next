@@ -80,6 +80,7 @@ const Intro: React.FC = () => {
 							bg: 'blackAlpha.100',
 						}}
 						as='a'
+						className='heap-download__resume'
 						href='/EricNowels-Resume-2024.pdf'
 						leftIcon={<Icon as={HiDocumentDownload} boxSize={4} />}
 						size='sm'
