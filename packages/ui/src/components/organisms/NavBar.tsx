@@ -9,9 +9,10 @@ import { NavLink, type NavBarLink } from '../molecules/NavLink'
 
 interface NavBarProps {
 	links: NavBarLink[]
+	label: string
 }
 
-const NavBar: React.FC<NavBarProps> = ({ links }) => {
+const NavBar: React.FC<NavBarProps> = ({ links, label }) => {
 	const pathname = usePathname()
 	const [title, setTitle] = useState<string>()
 	const printStyles: ChakraProps['sx'] = {
@@ -40,7 +41,7 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
 			>
 				<HStack>
 					<Link href='/'>
-						<Heading size='md'>Eric Nowels</Heading>
+						<Heading size='md'>{label}</Heading>
 					</Link>
 					{title ? (
 						<>
@@ -57,7 +58,7 @@ const NavBar: React.FC<NavBarProps> = ({ links }) => {
 					{links
 						.filter((link) => !link.disabled)
 						.map((link: NavBarLink) => (
-							<NavLink key={link.label} link={link} />
+							<NavLink key={link.label} {...link} />
 						))}
 				</HStack>
 			</HStack>
