@@ -35,6 +35,6 @@
 		"eslint-plugin-storybook": "^0.8.0",
 		"framer-motion": "^11.2.12",
 		"storybook": "^8.2.4",
-		"typescript": "^5.3.3"
+		"typescript": "^5.4.5"
 	}
 }
