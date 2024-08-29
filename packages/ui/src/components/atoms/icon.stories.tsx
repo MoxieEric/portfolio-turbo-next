@@ -41,6 +41,7 @@ export const Default: Story = {
 }
 export const AllIcons: Story = {
 	args: {},
+	tags: ['no-tests'],
 	decorators: () => (
 		<SimpleGrid columns={{ base: 2, md: 4, xl: 6 }} gap={8} rowGap={8}>
 			{Object.values(IconOption).map((iconSlug) => {

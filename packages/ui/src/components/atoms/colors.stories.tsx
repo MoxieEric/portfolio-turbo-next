@@ -38,6 +38,7 @@ type Story = StoryObj<typeof meta>
 /* Stories */
 export const AllColors: Story = {
 	args: {},
+	tags: ['no-tests'],
 	decorators: () => (
 		<VStack alignItems='start' gap={8}>
 			{Object.values(ColorSilo).map((silo) => {

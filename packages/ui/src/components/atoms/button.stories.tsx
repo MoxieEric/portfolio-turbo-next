@@ -56,6 +56,7 @@ type Story = StoryObj<typeof meta>
 export const Default: Story = {
 	args: {
 		children: 'Button',
+		'data-testid': 'test__button',
 	},
 	decorators: (Story, { args }) => {
 		const props: ButtonProps = {}

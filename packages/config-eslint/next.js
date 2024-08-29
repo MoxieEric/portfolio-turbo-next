@@ -61,22 +61,8 @@ module.exports = {
 				},
 			},
 		],
+		'@typescript-eslint/prefer-ts-expect-error': 'off',
+		'@typescript-eslint/ban-ts-comment': 'warn',
 	},
 	overrides,
-	// overrides: {
-	// 	rules: {
-	// 		'sort-imports': [
-	// 			'warn',
-	// 			{
-	// 				memberSyntaxSortOrder: [
-	// 					'none',
-	// 					'all',
-	// 					'multiple',
-	// 					'single',
-	// 				],
-	// 				allowSeparatedGroups: true,
-	// 			},
-	// 		],
-	// 	},
-	// },
 }

@@ -8,7 +8,8 @@
 		"lint": "turbo lint",
 		"type-check": "turbo type-check",
 		"clean": "turbo clean",
-		"format": "prettier --write \"**/*.{ts,tsx,md}\""
+		"format": "prettier --write \"**/*.{ts,tsx,md}\"",
+		"test": "cd packages/ui && pnpm run test"
 	},
 	"devDependencies": {
 		"prettier": "^3.2.5",
@@ -18,7 +19,7 @@
 	},
 	"packageManager": "pnpm@8.15.6",
 	"engines": {
-		"node": ">=18"
+		"node": ">=20"
 	},
 	"name": "with-tailwind"
 }
