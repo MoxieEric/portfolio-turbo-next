@@ -9,15 +9,15 @@ export const getIcon = (iconSlug: IconOption): As | undefined => {
 	let icon: As | undefined
 	switch (library) {
 		case 'Hi':
-			// @ts-expect-error -- must coerce
+			// @ts-ignore -- must coerce
 			icon = Hi[iconSlug] as As
 			break
 		case 'Fa':
-			// @ts-expect-error -- must coerce
+			// @ts-ignore -- must coerce
 			icon = Fa[iconSlug] as As
 			break
 		case 'Si':
-			// @ts-expect-error -- must coerce
+			// @ts-ignore -- must coerce
 			icon = Si[iconSlug] as As
 			break
 
