@@ -26,7 +26,7 @@ const baseStyle: PartsStyleObject = configHelpers.definePartsStyle({
 	},
 	body: {
 		p: { base: 4, md: 6 },
-		color: 'gray.500',
+		color: 'gray.700',
 		_dark: { color: 'gray.800' },
 	},
 })
