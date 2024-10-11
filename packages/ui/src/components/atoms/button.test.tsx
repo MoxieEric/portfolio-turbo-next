@@ -10,6 +10,7 @@ describe('Atom / Button', () => {
 		const buttonElement: HTMLButtonElement =
 			screen.getByTestId('test__button')
 		expect(buttonElement).toBeDefined()
+		expect(buttonElement.textContent).toBe('Button')
 	})
 
 	it('Click event', () => {
