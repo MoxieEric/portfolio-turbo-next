@@ -5,14 +5,15 @@ import {
 	Flex,
 	HStack,
 	Heading,
-	Icon,
+	// Icon,
 	Image,
 	Mark,
+	Text,
 	useHighlight,
 } from '@chakra-ui/react'
 import { FeatureCard } from '@repo/ui/components'
 import React from 'react'
-import { PiMountains } from 'react-icons/pi'
+// import { PiMountains } from 'react-icons/pi'
 import type { KeyWords } from '../../config/resumeHeaderConfig'
 import { resumeHeaderConfig } from '../../config/resumeHeaderConfig'
 
@@ -23,7 +24,7 @@ const ResumeHeader: React.FC = () => {
 	})
 	return (
 		<Flex flexDirection='row' gap={4} w='full'>
-			<Box h='full' overflow='hidden' rounded='xl' shadow='sm' w={48}>
+			<Box h='full' overflow='hidden' rounded='xl' shadow='sm' w={64}>
 				<Image
 					alt='Headshot of Eric Nowels'
 					height='full'
@@ -64,12 +65,15 @@ const ResumeHeader: React.FC = () => {
 					})}
 				</Heading>
 				<HStack pt={4}>
-					<HStack>
-						<Icon as={PiMountains} />
-						<Heading fontWeight='semibold' size='xs'>
-							{resumeHeaderConfig.location}
-						</Heading>
-					</HStack>
+					<Box maxW='prose'>
+						<Text color='black' fontSize='lg'>
+							13+ years of experience crafting robust, scalable
+							web and mobile applications. Using expertise in
+							TypeScript, React and GraphQL to deliver exceptional
+							user experiences through meticulous design and
+							development.
+						</Text>
+					</Box>
 				</HStack>
 			</FeatureCard>
 		</Flex>
