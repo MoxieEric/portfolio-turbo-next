@@ -31,7 +31,7 @@ const contactLinksConfig: Record<string, UiLink> = {
 	},
 	github: {
 		label: '@MoxieEric',
-		url: 'https://www.linkedin.com/in/ericnowels/',
+		url: 'https://github.com/MoxieEric',
 		icon: SiGithub,
 	},
 }

@@ -26,6 +26,7 @@ export interface TimelineEvent {
 	dateRange: string
 	logo?: ReactNode
 	type: EmploymentType
+	description?: React.ReactNode
 }
 
 interface EventProps {
@@ -34,7 +35,7 @@ interface EventProps {
 	line?: boolean
 }
 
-const Event: React.FC<EventProps> = ({ children, event, line = true }) => {
+const Event: React.FC<EventProps> = ({ event, line = true }) => {
 	return (
 		<Flex
 			alignItems='start'
@@ -94,7 +95,7 @@ const Event: React.FC<EventProps> = ({ children, event, line = true }) => {
 							<Icon as={HiCalendar} />
 							<Text size='sm'>{event.dateRange}</Text>
 						</HStack>
-						{children}
+						<Text>{event.description}</Text>
 					</CardBody>
 				</Stack>
 			</Card>
