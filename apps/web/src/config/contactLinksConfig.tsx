@@ -15,7 +15,7 @@ const contactLinksConfig: Record<string, UiLink> = {
 		icon: FaAt,
 	},
 	phone: {
-		label: '+1 718.496.0419',
+		label: '718.496.0419',
 		url: 'tel:+1 718.496.0419',
 		icon: FaMobile,
 	},

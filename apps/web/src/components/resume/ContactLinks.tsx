@@ -14,7 +14,7 @@ const ContactLinks: React.FC = () => {
 	]
 
 	return (
-		<HStack alignItems='center' gap={4} pl={6} w='full'>
+		<HStack alignItems='center' gap={4} w='full'>
 			<HStack alignItems='center' gap={4} justifyContent='flex-end'>
 				{textLinks.map((link) => (
 					<Button
