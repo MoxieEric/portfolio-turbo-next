@@ -18,8 +18,8 @@ import { experienceConfig } from '../../../config/experienceConfig'
 
 const Page: React.FC = () => {
 	return (
-		<SimpleGrid columns={6} gap={4} w='full'>
-			<GridItem as={VStack} colSpan={6} gap={4} w='full'>
+		<SimpleGrid columns={12} gap={4} w='full'>
+			<GridItem as={VStack} colSpan={12} gap={4} w='full'>
 				<ResumeHeader />
 				<FeatureCard size='md' title='What I Do' w='full'>
 					<HStack justifyContent='start' gap={8}>
@@ -37,20 +37,23 @@ const Page: React.FC = () => {
 					</HStack>
 				</FeatureCard>
 			</GridItem>
-			<GridItem as={VStack} colSpan={3} gap={4} w='full'>
+			<GridItem as={VStack} colSpan={7} gap={4} w='full'>
 				<SimpleCard title='Experience' w='full'>
-					<Timeline items={experienceConfig.slice(0, -1)} />
+					<Timeline
+						items={experienceConfig.slice(0, -1)}
+						descriptions
+					/>
 				</SimpleCard>
 			</GridItem>
-			<GridItem as={VStack} colSpan={3} gap={4} w='full'>
-				<FeatureCard size='sm' title='Top Skills'>
+			<GridItem as={VStack} colSpan={5} gap={4} w='full'>
+				<FeatureCard size='sm' title='Technical Skills'>
 					<HardSkills />
 				</FeatureCard>
 				<FeatureCard size='sm' title='Education' w='full'>
 					<Education />
 				</FeatureCard>
 			</GridItem>
-			<GridItem as={VStack} colSpan={6} gap={4} w='full'>
+			<GridItem as={VStack} colSpan={12} gap={4} w='full'>
 				<FooterLinks />
 			</GridItem>
 		</SimpleGrid>

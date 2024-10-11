@@ -5,6 +5,7 @@
 		"build:types": "turbo build --filter=@repo/types",
 		"dev": "turbo dev --filter web",
 		"dev:ui": "turbo dev --filter=...storybook --filter=@repo/ui",
+		"dev:all": "turbo dev --filter=...storybook --filter=@repo/ui --filter=web",
 		"lint": "turbo lint",
 		"type-check": "turbo type-check",
 		"clean": "turbo clean",

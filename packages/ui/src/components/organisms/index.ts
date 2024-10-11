@@ -1,4 +1,5 @@
 export * from './Event'
+export * from './ListEntry'
 export * from './NavBar'
 export * from './PillGroup'
 export * from './PillList'
