@@ -47,7 +47,7 @@ const PortfolioCard: React.FC<PortfolioCardProps> = ({
 				w={{ base: 'full', md: 48 }}
 			>
 				<Image
-					alt='BLX'
+					alt={content.title}
 					aspectRatio='1/1'
 					loading='lazy'
 					maxW={{ base: 'full' }}

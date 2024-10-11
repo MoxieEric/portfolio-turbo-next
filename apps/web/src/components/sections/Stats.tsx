@@ -11,7 +11,7 @@ const Stats: React.FC = () => {
 				alignItems='center'
 				display='flex'
 				justifyContent='center'
-				title=''
+				title={null}
 				w={{ base: 'full', md: '3xl' }}
 			>
 				<StatGroup w='full'>

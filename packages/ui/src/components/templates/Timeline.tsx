@@ -7,15 +7,18 @@ import { Event } from '../organisms'
 
 interface TimelineProps {
 	items: TimelineEvent[]
+	descriptions?: boolean
 }
 
-const Timeline: React.FC<TimelineProps> = ({ items }) => {
+const Timeline: React.FC<TimelineProps> = ({ items, descriptions }) => {
 	return (
 		<VStack gap={4} position='relative' w='full'>
-			{items.map((job, index) => (
+			{items.map((event, index) => (
 				<Event
-					event={job}
-					key={job.dateRange}
+					event={
+						descriptions ? event : { ...event, description: null }
+					}
+					key={event.title}
 					line={index + 1 < items.length}
 				/>
 			))}

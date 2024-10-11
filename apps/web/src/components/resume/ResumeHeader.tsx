@@ -5,16 +5,16 @@ import {
 	Flex,
 	HStack,
 	Heading,
-	Icon,
 	Image,
 	Mark,
+	VStack,
 	useHighlight,
 } from '@chakra-ui/react'
 import { FeatureCard } from '@repo/ui/components'
 import React from 'react'
-import { PiMountains } from 'react-icons/pi'
 import type { KeyWords } from '../../config/resumeHeaderConfig'
 import { resumeHeaderConfig } from '../../config/resumeHeaderConfig'
+import ContactLinks from './ContactLinks'
 
 const ResumeHeader: React.FC = () => {
 	const chunks = useHighlight({
@@ -23,17 +23,8 @@ const ResumeHeader: React.FC = () => {
 	})
 	return (
 		<Flex flexDirection='row' gap={4} w='full'>
-			<Box h='full' overflow='hidden' rounded='xl' shadow='sm' w={48}>
-				<Image
-					alt='Headshot of Eric Nowels'
-					height='full'
-					objectFit='cover'
-					src='/headshot--md.png'
-					w='full'
-				/>
-			</Box>
-
 			<FeatureCard
+				bg='transparent'
 				display='flex'
 				flexDirection='column'
 				justifyContent='space-between'
@@ -42,35 +33,51 @@ const ResumeHeader: React.FC = () => {
 				size='xl'
 				w='full'
 			>
-				<Heading size='xl'>{resumeHeaderConfig.title}</Heading>
-				<Heading
-					color='gray.600'
-					lineHeight='tall'
-					maxW='prose'
-					size='md'
-				>
-					{chunks.map((chunk) => {
-						if (!chunk.match) return chunk.text
-						return (
-							<Mark
-								key={chunk.text}
-								{...resumeHeaderConfig.highlightStyles[
-									chunk.text as KeyWords
-								]}
-							>
-								{chunk.text}
-							</Mark>
-						)
-					})}
-				</Heading>
-				<HStack pt={4}>
-					<HStack>
-						<Icon as={PiMountains} />
-						<Heading fontWeight='semibold' size='xs'>
-							{resumeHeaderConfig.location}
+				<HStack alignItems='center' gap={8}>
+					<Box
+						h='full'
+						overflow='hidden'
+						rounded='full'
+						shadow='sm'
+						w={40}
+					>
+						<Image
+							alt='Headshot of Eric Nowels'
+							aspectRatio='1/1'
+							height='full'
+							objectFit='cover'
+							objectPosition='center 20%'
+							src='/headshot--md.png'
+							w='full'
+						/>
+					</Box>
+					<VStack alignItems='start'>
+						<Heading size='xl'>{resumeHeaderConfig.title}</Heading>
+						<Heading
+							color='gray.600'
+							lineHeight='tall'
+							maxW='prose'
+							size='md'
+						>
+							{chunks.map((chunk) => {
+								if (!chunk.match) return chunk.text
+								return (
+									<Mark
+										key={chunk.text}
+										{...resumeHeaderConfig.highlightStyles[
+											chunk.text as KeyWords
+										]}
+									>
+										{chunk.text}
+									</Mark>
+								)
+							})}
 						</Heading>
-					</HStack>
+					</VStack>
 				</HStack>
+				<Box ml={36}>
+					<ContactLinks />
+				</Box>
 			</FeatureCard>
 		</Flex>
 	)

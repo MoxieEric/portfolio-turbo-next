@@ -8,11 +8,10 @@ import { skills } from '../../config/skillsConfig'
 const SoftSkills: React.FC = () => {
 	const softSkills: SkillConfig[] = [
 		skills.FullStack,
-		skills.DevOps,
 		skills.UXDesign,
-		skills.ProductManagement,
+		skills.DevOps,
 		skills.Leadership,
-		skills.InformationArchitecture,
+		skills.ProductManagement,
 	]
 	return (
 		<VStack>

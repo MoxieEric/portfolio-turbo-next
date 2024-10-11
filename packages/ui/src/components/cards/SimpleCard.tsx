@@ -25,9 +25,11 @@ const SimpleCard: React.FC<SimpleCardProps> = ({
 				w='full'
 			>
 				<CardBody display='flex' flexDir='column' gap={2} w='full'>
-					<Heading size='md' w='full'>
-						{title}
-					</Heading>
+					{!!title && (
+						<Heading size='md' w='full'>
+							{title}
+						</Heading>
+					)}
 					{children}
 				</CardBody>
 			</Stack>

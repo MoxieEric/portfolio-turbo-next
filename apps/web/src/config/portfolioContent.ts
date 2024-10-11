@@ -135,7 +135,7 @@ const portfolioContent: Record<Projects, PortfolioItem> = {
 		stack: ['Vue', 'Strappi', 'Foundation', 'GraphQL', 'Shopify'],
 	},
 	[Projects.PBCS]: {
-		title: 'ProductBoard ClickSink',
+		title: 'ProductBoard ClickSynk',
 		description:
 			'Connector plugin for syncing  ProductBoard data to ClickUp project management system and visa versa.',
 		id: 'pb-cs',
