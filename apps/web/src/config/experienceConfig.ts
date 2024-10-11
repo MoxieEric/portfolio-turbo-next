@@ -30,7 +30,7 @@ const experienceConfig: TimelineEvent[] = [
 		dateRange: '2013 - 2021',
 		type: EmploymentType.Contract,
 		description:
-			'Led cross-functional teams at a creative agency that specialized in building digital platforms for top brands in craft beer, CPG, and technology. Served as staff engineer, contributing to and overseeing UX design, development, and product strategy. Employed a variety of tech stacks depending on the nature of the product, including Angular, Vue, React, Next.js, WordPress and Shopify.',
+			'Led cross-functional teams at a creative agency that specializes in building digital platforms for top brands in craft beer, CPG, and technology. Served as staff engineer, contributing to and overseeing UX design, development, and product strategy. Employed a variety of tech stacks depending on the nature of the product, including Angular, Vue, React, Next.js, WordPress and Shopify.',
 	},
 	{
 		title: 'Senior Engineer',
@@ -60,7 +60,7 @@ const experienceConfig: TimelineEvent[] = [
 		dateRange: '2006 - 2011',
 		type: EmploymentType.FullTime,
 		description:
-			"Managed Spin Magazine's website. Duties included publishing, content production, SEO, SEM and web development for the Drupal. Sole staff photographer, and director of all original video content, including Spin Sessions, SpinHouse Live, BTS and on-site festival coverage.",
+			"Managed Spin Magazine's website. Duties included publishing, content production, SEO, SEM and web development for Drupal-powered websites. Sole staff photographer, and director of all original video content, including Spin Sessions, SpinHouse Live, BTS and on-site festival coverage.",
 	},
 	{
 		title: 'Photographer',

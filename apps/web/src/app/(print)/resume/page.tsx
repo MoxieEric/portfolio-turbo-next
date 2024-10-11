@@ -18,7 +18,7 @@ import { experienceConfig } from '../../../config/experienceConfig'
 
 const Page: React.FC = () => {
 	return (
-		<SimpleGrid columns={12} gap={4} w='full'>
+		<SimpleGrid columns={12} gap={8} w='full'>
 			<GridItem as={VStack} colSpan={12} gap={4} w='full'>
 				<ResumeHeader />
 				<FeatureCard size='md' title='What I Do' w='full'>
@@ -28,7 +28,7 @@ const Page: React.FC = () => {
 								I specialize in crafting intuitive,
 								user-centered web and mobile applications. With
 								a strong foundation in full-stack engineering,
-								UX, and agile methodoligies, I excel at
+								UX, and agile methodologies, I excel at
 								designing and developing scalable, maintainable
 								solutions that exceed expectations.
 							</Text>

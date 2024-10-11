@@ -13,7 +13,7 @@ const resumeHeaderConfig: {
 	highlightStyles: Record<KeyWords, ChakraProps>
 } = {
 	title: 'Eric Nowels',
-	body: 'Creative full-stack engineer with a passion for building products, teams, and experiences, that make a difference',
+	body: 'Creative full-stack engineer with a passion for building products, teams, and experiences that make a difference',
 	location: 'Based in Boulder, Colorado',
 	keywords: Object.values(KeyWords),
 	highlightStyles: {
