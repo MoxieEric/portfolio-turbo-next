@@ -2,7 +2,6 @@
 
 import {
 	Box,
-	Button,
 	Flex,
 	HStack,
 	Icon,
@@ -13,7 +12,6 @@ import {
 import type { UiLink } from '@repo/types'
 import { FeatureCard } from '@repo/ui/components'
 import React from 'react'
-import { HiDocumentDownload } from 'react-icons/hi'
 import { SiFlickr, SiGithub, SiLinkedin, SiYoutube } from 'react-icons/si'
 
 const Intro: React.FC = () => {
@@ -75,20 +73,6 @@ const Intro: React.FC = () => {
 					for building products that make a difference.
 				</Text>
 				<HStack flexWrap='wrap' gap={{ base: 2, md: 4 }} pt={4}>
-					<Button
-						_hover={{
-							bg: 'blackAlpha.100',
-						}}
-						as='a'
-						className='heap-download__resume'
-						href='/EricNowels-Resume-2024.pdf'
-						leftIcon={<Icon as={HiDocumentDownload} boxSize={4} />}
-						size='sm'
-						target='_blank'
-						variant='ghost'
-					>
-						Download CV
-					</Button>
 					<HStack gap={{ base: 2, md: 4 }}>
 						{links.map((link) => (
 							<IconButton
